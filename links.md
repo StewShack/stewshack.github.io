@@ -13,7 +13,7 @@ July 14, 2022
 
 Here is a list of links to my favorite articles.
 
-# Web Development2
+# Web Development
 
 | Date (YYYY/MM/DD) | Link | Tags |
 | ----------------- | ---- | ---- |
