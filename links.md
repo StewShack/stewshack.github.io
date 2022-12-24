@@ -14,6 +14,7 @@ July 14, 2022
 Here is a list of links to my favorite articles.
 
 # Web Development
+
 | Date (YYYY/MM/DD) | Link | Tags |
 | ----------------- | ---- | ---- |
 | 2022/07/14 | [Defensive CSS](https://defensivecss.dev/) | Development |
@@ -64,6 +65,7 @@ Here is a list of links to my favorite articles.
 | 2010/07/05 | [Coding Horror](https://blog.codinghorror.com/) | Development |
 
 # Product Owner
+
 | Date (YYYY/MM/DD) | Link | Tags |
 | ----------------- | ---- | ---- |
 | 2022/07/14 | [Tools for better thinking](https://untools.co/) | Tools |
