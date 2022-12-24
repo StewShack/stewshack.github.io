@@ -10,21 +10,21 @@ activemenu: "web"
 
 ## CSS
 
-* [Mouse Pointers](/mouse/)
+* [Mouse Pointers](/sc/mouse/)
 
 ## Node.js
 
-* [Jasper report using REST and Node.js](/post/jasper-rest/)
+* [Jasper report using REST and Node.js](/node/jasper-rest/)
 
 ## Software Craftsmanship
 
-* [Getting it Wrong the First Time](/post/wrong/)
-* [My Journey](/post/journey/) towards becoming a better Craftsman
-* [Programming](/post/programming/) theories not found in a textbook
+* [Getting it Wrong the First Time](/sc/wrong/)
+* [My Journey](/sc/journey/) towards becoming a better Craftsman
+* [Programming](/sc/programming/) theories not found in a textbook
 
 ## SQL
 
-* [Jasper Reports Tables and Parameters](/post/jasper-table-parameters/)
-* [Replication between different schemas](/post/replicationdifferentschemas/)
-* [Replication comparison between different servers](/post/replicationcomparison/)
-* [SQL Code Style Guide](/post/sql-code-guide/)
+* [Jasper Reports Tables and Parameters](/sql/jasper-table-parameters/)
+* [Replication between different schemas](/sql/replicationdifferentschemas/)
+* [Replication comparison between different servers](/sql/replicationcomparison/)
+* [SQL Code Style Guide](/sql/sql-code-guide/)
