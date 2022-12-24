@@ -2,7 +2,7 @@
 title: "Privacy Policy"
 description: "The StewShack privacy policy"
 date: 2018-04-29T00:00:00-00:00
-lastmod: 2018-04-29T00:00:00-00:00
+lastmod: 2022-12-24T00:00:00-00:00
 activemenu: "home"
 ---
 
@@ -12,8 +12,7 @@ activemenu: "home"
 
 1.1	This is the personal website for Dan Stewart. He is committed to safeguarding the privacy of StewShack visitors and service users.
 
-1.2	This policy applies where he is acting as a data controller with respect to the personal data of StewShack visitors and service users; 
-in other words, where he is determine the purposes and means of the processing of that personal data.
+1.2	This policy applies where he is acting as a data controller with respect to the personal data of StewShack visitors and service users; in other words, where he is determine the purposes and means of the processing of that personal data.
 
 1.3	His services use cookies on the website. Insofar as those cookies are not strictly necessary for the provision of StewShack.
 
@@ -25,8 +24,7 @@ in other words, where he is determine the purposes and means of the processing o
 
 2.1	This document was created using a template from SEQ Legal (<a href="https://seqlegal.com">https://seqlegal.com</a>).
 
-You must retain the above credit. Use of this document without the credit is an infringement of copyright. 
-However, you can purchase from us an equivalent document that does not include the credit.
+You must retain the above credit. Use of this document without the credit is an infringement of copyright. However, you can purchase from us an equivalent document that does not include the credit.
 
 3.0	How we use your personal data
 
@@ -40,23 +38,14 @@ However, you can purchase from us an equivalent document that does not include t
 
 ( d )	the legal bases of the processing.
 
-3.2	We may process data about your use of our website and services ("usage data"). The usage data may include your IP address, 
-geographical location, browser type and version, operating system, referral source, length of visit, page views and website 
-navigation paths, as well as information about the timing, frequency and pattern of your service use. The source of the usage 
-data is <a href="https://www.netlify.com/privacy/">Netlify</a>. 
-This usage data may be processed for the purposes of 
-analysing the use of the website and services. The legal basis for this processing is our legitimate interests, namely monitoring 
-and improving our website and services.
+3.2	We may process data about your use of our website and services ("usage data"). The usage data may include your IP address, geographical location, browser type and version, operating system, referral source, length of visit, page views and website navigation paths, as well as information about the timing, frequency and pattern of your service use. The source of the usage 
+data is <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub</a>. This usage data may be processed for the purposes of 
+analysing the use of the website and services. The legal basis for this processing is our legitimate interests, namely monitoring and improving our website and services.
 
-3.3	We *do not* ask for your account data ("account data"). The account data may include your name and email address. The source of the 
-account data is you or your employer. No account data is processed for the purposes of operating our website, providing our services, 
-ensuring the security of our website and services, maintaining back-ups of our databases and communicating with you. If anyone claiming to 
+3.3	We *do not* ask for your account data ("account data"). The account data may include your name and email address. The source of the account data is you or your employer. No account data is processed for the purposes of operating our website, providing our services, ensuring the security of our website and services, maintaining back-ups of our databases and communicating with you. If anyone claiming to 
 be affiliated with StewShack asks you for account data, do not give it to them.
 
-3.4	We *do not* process a personal profile on our website ("profile data"). The profile data may include your name, address, telephone number, 
-email address, profile pictures, gender, date of birth, relationship status, interests and hobbies, educational details and employment details. 
-No profile data is processed for the purposes of enabling and monitoring your use of our website and services. If anyone claiming to be affiliated 
-with StewShack asks you for personal profile data, do not give it to them.
+3.4	We *do not* process a personal profile on our website ("profile data"). The profile data may include your name, address, telephone number, email address, profile pictures, gender, date of birth, relationship status, interests and hobbies, educational details and employment details. No profile data is processed for the purposes of enabling and monitoring your use of our website and services. If anyone claiming to be affiliated with StewShack asks you for personal profile data, do not give it to them.
 
 3.5	We *do not* process information that you post for publication on our website or through our services ("publication data"). The publication data may be processed for the purposes of enabling such publication and administering our website and services. If anyone claiming to be affiliated 
 with StewShack asks you for publication data, do not give it to them. Any data enty made on this site is purley client-side and not retained. 
@@ -64,8 +53,7 @@ with StewShack asks you for publication data, do not give it to them. Any data e
 3.6	We *do not* process information relating to transactions, including purchases of goods and services, that you enter into with us and/or through our website ("transaction data"). The transaction data may include your contact details, your card details and the transaction details. No transaction 
 data is processed for the purpose of supplying the purchased goods and services and keeping proper records of those transactions. If anyone claiming to be affiliated with StewShack asks you for transaction data, do not give it to them.
 
-3.7	We *do not* process information that you provide to us for the purpose of subscribing to our email notifications and/or newsletters 
-("notification data"). If anyone claiming to be affiliated with StewShack asks you for notification data, do not give it to them.
+3.7	We *do not* process information that you provide to us for the purpose of subscribing to our email notifications and/or newsletters ("notification data"). If anyone claiming to be affiliated with StewShack asks you for notification data, do not give it to them.
 
 3.8	We *do not* process information contained in or relating to any communication that you send to us ("correspondence data"). The correspondence data may include the communication content and metadata associated with the communication. Our website does not generate metadata associated with communications made using the website contact forms. No correspondence data is processed for the purposes of communicating with you and record-keeping. If anyone claiming to be affiliated with StewShack asks you for correspondence data, do not give it to them.
 
@@ -75,7 +63,7 @@ data is processed for the purpose of supplying the purchased goods and services 
 
 4.1	We may disclose your analytics data to our insurers and/or professional advisers insofar as reasonably necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, obtaining professional advice, or the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure.
 
-4.6	In addition to the specific disclosures of analytics data set out in this Section 4, we may disclose your data where such disclosure is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person. We may also disclose your data where such disclosure is necessary for the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure.
+4.2	In addition to the specific disclosures of analytics data set out in this Section 4, we may disclose your data where such disclosure is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person. We may also disclose your data where such disclosure is necessary for the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure.
 
 5.0	International transfers of your personal data
 
@@ -83,7 +71,7 @@ data is processed for the purpose of supplying the purchased goods and services 
 
 5.2	We are in the United States. The European Commission has made an "adequacy decision" with respect to the data protection laws of each of these countries. Transfers to the US will be protected by appropriate safeguards, namely the use of standard data protection clauses adopted or approved by the European Commission, a copy of which can be obtained from <a href="https://www.eugdpr.org/">GDPR</a>.
 
-5.3	The hosting facilities for our website are controlled by Netlify.
+5.3	The hosting facilities for our website are controlled by GitHub.
 
 6.0	Amendments
 
@@ -129,17 +117,17 @@ data is processed for the purpose of supplying the purchased goods and services 
 
 7.9	You have the right to object to our processing of your personal data for scientific or historical research purposes or statistical purposes on grounds relating to your particular situation, unless the processing is necessary for the performance of a task carried out for reasons of public interest.
 
-7.10	To the extent that the legal basis for our processing of your personal data is:
+7.10 To the extent that the legal basis for our processing of your personal data is:
 
-( a )	consent; or
+( a ) consent; or
 
-( b )	that the processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract, and such processing is carried out by automated means, you have the right to receive your personal data from us in a structured, commonly used and machine-readable format. However, this right does not apply where it would adversely affect the rights and freedoms of others.
+( b ) that the processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract, and such processing is carried out by automated means, you have the right to receive your personal data from us in a structured, commonly used and machine-readable format. However, this right does not apply where it would adversely affect the rights and freedoms of others.
 
-7.11	If you consider that our processing of your personal information infringes data protection laws, you have a legal right to lodge a complaint with a supervisory authority responsible for data protection. You may do so in the EU member state of your habitual residence, your place of work or the place of the alleged infringement.
+7.11 If you consider that our processing of your personal information infringes data protection laws, you have a legal right to lodge a complaint with a supervisory authority responsible for data protection. You may do so in the EU member state of your habitual residence, your place of work or the place of the alleged infringement.
 
-7.12	To the extent that the legal basis for our processing of your personal information is consent, you have the right to withdraw that consent at any time. Withdrawal will not affect the lawfulness of processing before the withdrawal.
+7.12 To the extent that the legal basis for our processing of your personal information is consent, you have the right to withdraw that consent at any time. Withdrawal will not affect the lawfulness of processing before the withdrawal.
 
-7.13	You may exercise any of your rights in relation to your personal data by email notice to us.
+7.13 You may exercise any of your rights in relation to your personal data by email notice to us.
 
 8.0	About cookies
 
@@ -153,42 +141,42 @@ data is processed for the purpose of supplying the purchased goods and services 
 
 9.1	We use cookies for the following purposes:
 
-( a )	analysis - we use cookies to help us to analyse the use and performance of our website and services (cookies used for this purpose are: purpose are: analytics and Netlify;
+( a ) analysis - we use cookies to help us to analyse the use and performance of our website and services (cookies used for this purpose are: purpose are: analytics and Netlify;
 
-11.0	Cookies used by our service providers
+11.0 Cookies used by our service providers
 
-11.1	Our service providers use cookies and those cookies may be stored on your computer when you visit our website.
+11.1 Our service providers use cookies and those cookies may be stored on your computer when you visit our website.
 
-11.2	We use Netlify to host this website. This service uses cookies for specify purpose(s). You can view the privacy policy of this service provider at <a href="https://www.netlify.com/privacy/">https://www.netlify.com/privacy/</a>.
+11.2 We use Netlify to host this website. This service uses cookies for specify purpose(s). You can view the privacy policy of this service provider at <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.
 
-12.0	Managing cookies
+12.0 Managing cookies
 
-12.1	Most browsers allow you to refuse to accept cookies and to delete cookies. The methods for doing so vary from browser to browser, and from version to version. You can however obtain up-to-date information about blocking and deleting cookies via these links:
+12.1 Most browsers allow you to refuse to accept cookies and to delete cookies. The methods for doing so vary from browser to browser, and from version to version. You can however obtain up-to-date information about blocking and deleting cookies via these links:
 
-( a )	<a href="https://support.google.com/chrome/answer/95647?hl=en">https://support.google.com/chrome/answer/95647?hl=en</a> (Chrome);
+( a ) <a href="https://support.google.com/chrome/answer/95647?hl=en">https://support.google.com/chrome/answer/95647?hl=en</a> (Chrome);
 
-( b )	<a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences</a> (Firefox);
+( b ) <a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences">https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences</a> (Firefox);
 
-( c )	<a href="https://help.opera.com/en/latest/web-preferences/">https://help.opera.com/en/latest/web-preferences/</a> (Opera);
+( c ) <a href="https://help.opera.com/en/latest/web-preferences/">https://help.opera.com/en/latest/web-preferences/</a> (Opera);
 
-( d )	<a href="https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies">https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies</a> (Internet Explorer);
+( d ) <a href="https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies">https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies</a> (Internet Explorer);
 
-( e )	<a href="https://support.apple.com/en-us/HT201265">https://support.apple.com/en-us/HT201265</a> (Safari); and
+( e ) <a href="https://support.apple.com/en-us/HT201265">https://support.apple.com/en-us/HT201265</a> (Safari); and
 
-( f )	<a href="https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy">https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy</a> (Edge).
+( f ) <a href="https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy">https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy</a> (Edge).
 
-12.2	Blocking all cookies will have a negative impact upon the usability of many websites.
+12.2 Blocking all cookies will have a negative impact upon the usability of many websites.
 
-12.3	If you block cookies, you may not be able to use all the features on our website.
+12.3 If you block cookies, you may not be able to use all the features on our website.
 
-13.0	Our details
+13.0 Our details
 
-13.1	This website is owned and operated by Dan Stewart.
+13.1 This website is owned and operated by Dan Stewart.
 
-13.2	We are not registered in England or Wales.
+13.2 We are not registered in England or Wales.
 
-13.3	You can contact us: <a href="mailto:danstewart@live.com">danstewart@live.com</a>
+13.3 You can contact us: <a href="mailto:danstewart@live.com">danstewart@live.com</a>
 
-14.0	Data protection officer
+14.0 Data protection officer
 
-14.1	Our data protection officer's contact details are: Dan Stewart <a href="mailto:danstewart@live.com">danstewart@live.com</a>.
+14.1 Our data protection officer's contact details are: Dan Stewart <a href="mailto:danstewart@live.com">danstewart@live.com</a>.
