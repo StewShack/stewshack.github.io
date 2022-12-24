@@ -2,14 +2,14 @@
 title: "Journey"
 description: "My journey towards becoming an IT professional"
 date: 2018-02-21T00:00:00-00:00
-lastmod: 2020-12-20T00:00:00-00:00
+lastmod: 2022-12-24T00:00:00-00:00
 activemenu: "web"
 ---
 
 # My Journey as a Software Craftsman
 
 By: Dan Stewart\
-December 20, 2020
+December 24, 2022
 
 I began typing at a very young age.
 
@@ -92,7 +92,7 @@ In May 2016 I was promoted to Senior Quality Engineer. My focus was on test auto
 
 ## First Product Management Job
 
-In March 2020, I was promoted to Associate Technology Product Manager (TPM). I work alongside another TPM on a student homepage for Kaplan. Her role is to work with senior leaders on a roadmap. Then she collaborates with designers and researchers creating the designs that the team will work on. I take these designs and create Jira tickets. Then I work with the team in refining the tickets. I act as the product owner setting priority and answering questions. As we near the release of the feature, I conduct user acceptance testing. After the release I monitor the product to ensure things are working in production.
+In March 2020, I was promoted to Associate Technology Product Manager (TPM). In June 2021, I was promoted to Product Owner. I work alongside an executive director on a student homepage for Kaplan. Her role is to work with senior leaders on a roadmap. Then we collaborate with designers and researchers creating the designs that the team will work on. I take these designs and create Jira tickets. Then I work with the team in refining the tickets. I act as the product owner setting priority and answering questions. As we near the release of the feature, I conduct user acceptance testing. After the release I monitor the product to ensure things are working in production.
 
 This quote represents the content of this website.
 
