@@ -65,7 +65,7 @@ Here is a list of links to my favorite articles.
 
 # Product Owner
 | Date (YYYY/MM/DD) | Link | Tags |
-|-------------------|------|-----:|
+| ----------------- | ---- | ---- |
 | 2022/07/14 | [Tools for better thinking](https://untools.co/) | Tools |
 | 2021/10/09 | [The Product Strategy Stack](https://www.reforge.com/blog/the-product-strategy-stack) | Development |
 | 2021/10/09 | [How to Deal with Difficult People on Software Projects](https://www.howtodeal.dev/) | Development |
@@ -105,7 +105,7 @@ Here is a list of links to my favorite articles.
 # Being a Better Person
 
 | Date (YYYY/MM/DD) | Link | Tags |
-|-------------------|------|-----:|
+| ----------------- | ---- | ---- |
 | 2021/10/09 | [Rivian electric trucks](https://rivian.com/) | Life |
 | 2019/02/20 | [Philosophy Now](https://philosophynow.org/) | Learning |
 | 2019/01/12 | [Good Reads](https://www.goodreads.com/) | Learning |
