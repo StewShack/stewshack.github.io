@@ -1,0 +1,13 @@
+﻿/* humanstxt.org */
+
+/* TEAM */
+  Developer: Dan Stewart
+  Source: http://www.github.com/stewshack/personalwebsitehugo
+  Site: https://www.stewshack.com
+  Location: Centennial, CO
+
+/* THANKS */
+  Netlify.com
+
+/* SITE */
+  Components: Hugo

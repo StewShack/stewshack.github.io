@@ -1,0 +1,12 @@
+﻿# http://www.robotstxt.org
+
+# Laws of Robotics
+# Disallow: /harming/humans
+# Disallow: /ignoring/human/orders
+# Disallow: /harm/to/self
+
+User-agent: *
+Allow: *
+Crawl-delay: 5
+
+Sitemap: http://www.stewshack.com/sitemap.xml
