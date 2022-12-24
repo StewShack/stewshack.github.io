@@ -17,6 +17,6 @@ activemenu: "testing"
 ## Node.js
 
 * [Crawling a Webpage using Node.js](/node/node-crawl)
-* [Selenium UI Testing with Node.js](/node/selenium-node)
+* [Selenium UI Testing with Node.js](/qa/selenium-node)
 * [Testing Jasper reports using REST and Node.js](/node/jasper-report-tests)
 * [Testing file paths held in a database using Node.js](/node/testing-filepaths-from-database)
