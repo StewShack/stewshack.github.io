@@ -36,12 +36,7 @@ Description: Established QA practices in an Agile Continuous Delivery workflow. 
 
 Title: 2005 &ndash; 2013 Developer
 
-Description: Created new ASP.NET MVC C# websites to replace classical ASP websites. These sites used NHibernate as
-the Object-Relational Mapper. Maintained and enhanced websites that used both ASP and ASP.NET C# Web forms. 
-Added value by allowing custom branding of course content delivery systems for corporate clients using CSS.
-Updated existing MS SQL Server data model and stored procedures to meet business needs using TSQL. Delivered a monthly 
-Web statistics report using Google Analytics. Used Crystal Reports to deliver business intelligence reports.
-Mentored other team members through structured training sessions.
+Description: Created new ASP.NET MVC C# websites to replace classical ASP websites. These sites used NHibernate as the Object-Relational Mapper. Maintained and enhanced websites that used both ASP and ASP.NET C# Web forms. Added value by allowing custom branding of course content delivery systems for corporate clients using CSS. Updated existing MS SQL Server data model and stored procedures to meet business needs using TSQL. Delivered a monthly Web statistics report using Google Analytics. Used Crystal Reports to deliver business intelligence reports. Mentored other team members through structured training sessions.
 
 ## Indigio, Denver, CO
 
@@ -49,8 +44,7 @@ Mentored other team members through structured training sessions.
 
 Title: Contract Software Developer
 
-Description: Development using ASP.NET C# on existing websites to meet business needs. Built console applications using C#
-to transfer files and process emails to a MS SQL Server database. Helped redesign an existing legacy ASP website.
+Description: Development using ASP.NET C# on existing websites to meet business needs. Built console applications using C# to transfer files and process emails to a MS SQL Server database. Helped redesign an existing legacy ASP website.
 
 ## Cadpo (now iKnowledge Solutions), Westminster, CO
 
@@ -58,10 +52,8 @@ to transfer files and process emails to a MS SQL Server database. Helped redesig
 
 Title: Software Developer / Team Leader
 
-Description: Led a team of three developers upgrading the existing ASP i.get.it Learning Management System to ASP.NET C#. 
-Built stored procedures with SQL for all data transactions. Normalized the existing relational database reducing it by 62%. 
-Designed the site with CSS to make it compliant with Section 508. Provided customer service to all internal and external customers. 
-Made the existing courseware in the system compliant with AICC.</p>
+Description: Led a team of three developers upgrading the existing ASP i.get.it Learning Management System to ASP.NET C#. Built stored procedures with SQL for all data transactions. Normalized the existing relational database reducing it by 62%. Designed the site with CSS to make it compliant with Section 508. Provided customer service to all internal and external customers. 
+Made the existing courseware in the system compliant with AICC.
 
 ## petroWEB Inc., Denver, CO
 
@@ -69,9 +61,7 @@ Made the existing courseware in the system compliant with AICC.</p>
 
 Title: Software Developer
 
-Description: Used AP.NET C# to access oil, water, and gas production XML data transforming it into a Web report using XSLT. Chart 
-FX.NET was implemented to display the data graphically. Developed a classical ASP employment site for the Rocky Mountain Association 
-of Geologists. Maintained legacy ASP site interfacing with AutoDesk MapGuide plug-in.
+Description: Used AP.NET C# to access oil, water, and gas production XML data transforming it into a Web report using XSLT. Chart FX.NET was implemented to display the data graphically. Developed a classical ASP employment site for the Rocky Mountain Association of Geologists. Maintained legacy ASP site interfacing with AutoDesk MapGuide plug-in.
 
 ## Lipper Inc., Denver, CO
 
@@ -103,8 +93,6 @@ Masters in Information Systems Engineering
 
 Certificate in Applied Information Technology
 
-Graduated valedictorian.
-
 Completed projects in ASP, Visual Basic 6, Java, and Oracle.
 
 ## Oklahoma State University, Stillwater, OK
@@ -126,8 +114,6 @@ Webmaster for Human Resource Management Association.
 1988 &ndash; 1992
 
 High School Degree
-
-Graduated valedictorian.
 
 Tutor in math and science.
 
