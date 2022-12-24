@@ -6,7 +6,7 @@ lastmod: 2022-12-24T00:00:00-00:00
 activemenu: "web"
 ---
 
-# Mouse Pointers2
+# Mouse Pointers
 
 Using CSS you can modify the mouse pointers that a user sees.
 
