@@ -15,7 +15,7 @@ Here is a list of links to my favorite articles.
 
 # Web Development
 | Date (YYYY/MM/DD) | Link | Tags |
-|-------------------|------|-----:|
+| ----------------- | ---- | ---- |
 | 2022/07/14 | [Defensive CSS](https://defensivecss.dev/) | Development |
 | 2022/07/14 | [Deepkit High Performance Typescript Framework](https://deepkit.io/) | Development, Tools |
 | 2022/07/14 | [An Overview of Popular Programming Languages](https://praxent.com/blog/overview-popular-programming-languages-app-development#) | Development |
