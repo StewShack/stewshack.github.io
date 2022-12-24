@@ -141,13 +141,13 @@ data is processed for the purpose of supplying the purchased goods and services 
 
 9.1	We use cookies for the following purposes:
 
-( a ) analysis - we use cookies to help us to analyse the use and performance of our website and services (cookies used for this purpose are: purpose are: analytics and Netlify;
+( a ) analysis - we use cookies to help us to analyse the use and performance of our website and services (cookies used for this purpose are: purpose are: analytics and GitHub;
 
 11.0 Cookies used by our service providers
 
 11.1 Our service providers use cookies and those cookies may be stored on your computer when you visit our website.
 
-11.2 We use Netlify to host this website. This service uses cookies for specify purpose(s). You can view the privacy policy of this service provider at <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.
+11.2 We use GitHub to host this website. This service uses cookies for specify purpose(s). You can view the privacy policy of this service provider at <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a>.
 
 12.0 Managing cookies
 
