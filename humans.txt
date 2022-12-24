@@ -2,12 +2,12 @@
 
 /* TEAM */
   Developer: Dan Stewart
-  Source: http://www.github.com/stewshack/personalwebsitehugo
+  Source: http://www.github.com/stewshack/stewshack.github.io
   Site: https://www.stewshack.com
   Location: Centennial, CO
 
 /* THANKS */
-  Netlify.com
+  GitHub.com
 
 /* SITE */
-  Components: Hugo
+  Components: GitHub Pages
