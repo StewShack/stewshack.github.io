@@ -10,6 +10,8 @@ activemenu: "web"
 
 Using CSS you can modify the mouse pointers that a user sees.
 
+<div>
+
 <div style="cursor: auto; background-color: #005; color: #FFF; float: left; margin: 1em; padding: 0.5em; text-align: center; width: 12em;">cursor: auto</div>
 
 <div style="cursor: crosshair; background-color: #005; color: #FFF; float: left; margin: 1em; padding: 0.5em; text-align: center; width: 12em;">cursor: crosshair</div>
@@ -41,3 +43,5 @@ Using CSS you can modify the mouse pointers that a user sees.
 <div style="cursor: wait; background-color: #005; color: #FFF; float: left; margin: 1em; padding: 0.5em; text-align: center; width: 12em;">cursor: wait</div>
 
 <div style="cursor: help; background-color: #005; color: #FFF; float: left; margin: 1em; padding: 0.5em; text-align: center; width: 12em;">cursor: help</div>
+
+</div>
