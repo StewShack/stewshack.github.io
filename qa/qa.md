@@ -10,13 +10,13 @@ activemenu: "testing"
 
 ## General
 
-* [Testing Column Length Changes](/post/testing-column-length-change)
-* [Testing Numeric Input](/numeric)
-* [Testing Process](/post/testing-process)
+* [Testing Column Length Changes](/qa/testing-column-length-change)
+* [Testing Numeric Input](/qa/numeric)
+* [Testing Process](/qa/testing-process)
 
 ## Node.js
 
-* [Crawling a Webpage using Node.js](/post/node-crawl/)
-* [Selenium UI Testing with Node.js](/post/selenium-node)
-* [Testing Jasper reports using REST and Node.js](/post/jasper-report-tests/)
-* [Testing file paths held in a database using Node.js](/post/testing-filepaths-from-database/)
+* [Crawling a Webpage using Node.js](/node/node-crawl/)
+* [Selenium UI Testing with Node.js](/node/selenium-node)
+* [Testing Jasper reports using REST and Node.js](/node/jasper-report-tests/)
+* [Testing file paths held in a database using Node.js](/node/testing-filepaths-from-database/)

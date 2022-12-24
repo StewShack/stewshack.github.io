@@ -41,5 +41,3 @@ Using CSS you can modify the mouse pointers that a user sees.
 <div style="cursor: wait; background-color: #005; color: #FFF; margin: 1em; padding: 0.5em; text-align: center; width: 12em;">cursor: wait</div>
 
 <div style="cursor: help; background-color: #005; color: #FFF; margin: 1em; padding: 0.5em; text-align: center; width: 12em;">cursor: help</div>
-
-</div>
