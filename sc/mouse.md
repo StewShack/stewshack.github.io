@@ -6,11 +6,11 @@ lastmod: 2022-12-24T00:00:00-00:00
 activemenu: "web"
 ---
 
-# Mouse Pointers
+# Mouse Pointers2
 
 Using CSS you can modify the mouse pointers that a user sees.
 
-<div>
+<div style="display block; clear: both;">
 
 <div style="cursor: auto; background-color: #005; color: #FFF; float: left; margin: 1em; padding: 0.5em; text-align: center; width: 12em;">cursor: auto</div>
 
