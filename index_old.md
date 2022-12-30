@@ -9,7 +9,6 @@ activemenu: "home"
 
 <img src="/images/stewshack.jpg" style="float:left; margin: 0.5em;" alt="Dan Stewart">
 
-
 # About Me
 
 I am a Product Owner at Kaplan.
