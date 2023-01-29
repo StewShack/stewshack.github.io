@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="msapplication-TileColor" content="#10a51d" />
+  <meta name="theme-color" content="#10a51d" />
+  <meta name="Description" content="Links to my favorite articles." />
+  <title>StewShack - Links</title>
+  <link rel="author" href="/humans.txt" />
+  <link rel="sitemap" href="/sitemap.xml" />
+  <!-- Include Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <!-- Include DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/datatables.min.css" />
+</head>
+
+<body>
+  <header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="index.htm" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.htm" class="nav-link">About Me</a></li>
+      <li class="nav-item"><a href="resume.htm" class="nav-link">Resume</a></li>
+      <li class="nav-item"><a href="articles.htm" class="nav-link active" aria-current="page">Articles</a></li>
+    </ul>
+  </header>
+  <main class="container">
+    <p>
+      By: Dan Stewart<br />
+      January 28, 2023
+    </p>
+    <p>
+      Here is a list of my favorite links.
+    </p>
+    <table id="links-grid" class="table table-striped table-hover table-light" style="width:100%">
+      <thead>
+        <tr>
+          <th>Date (YYYY/MM/DD)</th>
+          <th>Link</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2022/07/14</td>
+          <td><a href="https://defensivecss.dev/">Defensive CSS</a></td>
+          <td>Development</td>
+        </tr>
+        <td>2022/02/20</td>
+        <td><a href="https://blog.frankmtaylor.com/2021/10/21/a-small-guide-for-naming-stuff-in-front-end-code/">A Small
+            Guide for Naming Stuff in Front-end Code</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2021/10/09</td>
+        <td><a href="https://draculatheme.com/">Dracula Theme</a></td>
+        <td>Tools</td>
+        </tr>
+        <td>2019/02/20</td>
+        <td><a href="https://news.ycombinator.com/">Hacker News</a></td>
+        <td>Development, Tools</td>
+        </tr>
+        <td>2019/01/25</td>
+        <td><a href="https://app.programmingfonts.org">Programming Fonts</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2019/01/12</td>
+        <td><a href="https://exercism.io/">Exercism - Code practice and mentorship</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2018/12/19</td>
+        <td><a href="https://techdevguide.withgoogle.com/">Grow Your Technical Skills with Google</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2018/05/21</td>
+        <td><a href="https://slack.com">Slack</a></td>
+        <td>Tools</td>
+        </tr>
+        <td>2018/02/25</td>
+        <td><a href="https://regexper.com/">Regexper</a></td>
+        <td>Regex</td>
+        </tr>
+        <td>2018/01/20</td>
+        <td><a href="https://www.netlify.com/">Netlify</a></td>
+        <td>Hosting</td>
+        </tr>
+        <td>2017/08/26</td>
+        <td><a href="https://www.freecodecamp.org/">Free Code Camp</a></td>
+        <td>Web</td>
+        </tr>
+        <td>2017/02/05</td>
+        <td><a href="http://www.timer-tab.com/">Timer Tab</a></td>
+        <td>Tools</td>
+        </tr>
+        <td>2016/11/30</td>
+        <td><a href="https://js.foundation/">JS Foundation</a></td>
+        <td>JavaScript</td>
+        </tr>
+        <td>2016/11/30</td>
+        <td><a href="https://regex101.com/">Regex 101</a></td>
+        <td>Regex</td>
+        </tr>
+        <td>2016/10/01</td>
+        <td><a href="http://javascriptenlightenment.com/">JavaScript Enlightenment</a></td>
+        <td>JavaScript, Book</td>
+        </tr>
+        <td>2015/09/01</td>
+        <td><a href="https://code.visualstudio.com">Visual Studio Code</a></td>
+        <td>Tools</td>
+        </tr>
+        <td>2015/03/19</td>
+        <td><a href="https://www.owasp.org/index.php/Authentication_Cheat_Sheet">Authentication Cheat Sheet</a></td>
+        <td>Security,Web</td>
+        </tr>
+        <td>2014/02/06</td>
+        <td><a href="">E.W.Dijkstra Archive:
+            1985</a>https://www.cs.utexas.edu/users/EWD/misc/vanVlissingenInterview.html</td>
+        <td>Development</td>
+        </tr>
+        <td>2013/12/26</td>
+        <td><a href="http://www.aaronstannard.com/post/2013/12/19/The-Taxonomy-of-Terrible-Programmers.aspx">The
+            Taxonomy of Terrible Programmers</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2013/12/02</td>
+        <td><a href="https://www.acm.org/about-acm/code-of-ethics">Software Engineering Code of Ethics and Professional
+            Practice</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2013/07/29</td>
+        <td><a href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD03xx/EWD340.html">E.W.Dijkstra Archive: The
+            Humble Programmer</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2012/12/14</td>
+        <td><a href="https://filezilla-project.org/">FileZilla - The free FTP solution</a></td>
+        <td>Tools</td>
+        </tr>
+        <td>2012/06/05</td>
+        <td><a href="https://getbootstrap.com/">Bootstrap</a></td>
+        <td>Web</td>
+        </tr>
+        <td>2012/06/05</td>
+        <td><a href="https://fontawesome.com/">Font Awesome</a></td>
+        <td>Web,Font</td>
+        </tr>
+        <td>2012/05/15</td>
+        <td><a href="https://www.codecademy.com/">Learn to code Codecademy</a></td>
+        <td>Teaching,Development</td>
+        </tr>
+        <td>2012/03/21</td>
+        <td><a href="https://collectiveidea.com/blog/archives/2012/03/16/your-identity-your-code/">Your identity is not
+            Your code</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2011/10/17</td>
+        <td><a href="https://www.jeffwofford.com/?p=838">Getting Stuck</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2016/08/24</td>
+        <td><a href="https://thinkdiffere.net/the-tao-of-programming-4dbe01178ed4#.njcpjz3pp">The Tao Of Programming</a>
+        </td>
+        <td>Development</td>
+        </tr>
+        <td>2011/01/12</td>
+        <td><a href="https://en.wikipedia.org/wiki/Transformation_Priority_Premise">The Transformation Priority
+            Premise</a></td>
+        <td>Testing</td>
+        </tr>
+        <td>2010/08/23</td>
+        <td><a href="https://martinfowler.com/articles/mocksArentStubs.html">Mocks Aren't Stubs</a></td>
+        <td>Testing</td>
+        </tr>
+        <td>2010/08/03</td>
+        <td><a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model - View - Controller</a>
+        </td>
+        <td>MVC</td>
+        </tr>
+        <td>2010/07/05</td>
+        <td><a href="https://stackoverflow.com/">Stack Overflow</a></td>
+        <td>Development</td>
+        </tr>
+        <td>2010/07/05</td>
+        <td><a href="http://www.csszengarden.com/">css Zen Garden: The Beauty in CSS Design</a></td>
+        <td>Web,CSS</td>
+        </tr>
+        <td>2010/07/05</td>
+        <td><a href="https://blog.codinghorror.com/">Coding Horror</a></td>
+        <td>Development</td>
+        </tr>
+      <tr>
+        <td>2022/07/14
+        <td><a href="https://untools.co/">Tools for better thinking</a></td>
+        <td>Tools</td>
+      </tr>
+      <tr>
+        <td>2021/10/09</td>
+        <td><a href="https://www.reforge.com/blog/the-product-strategy-stack">The Product Strategy Stack</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2021/10/09</td>
+        <td><a href="https://www.howtodeal.dev/">How to Deal with Difficult People on Software Projects</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2021/10/09</td>
+        <td><a href="https://riskfirst.org/">Risk-First Software Development</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2021/10/09</td>
+        <td><a href="https://artvee.com/">Browse and download high-resolution, public domain artworks</a></td>
+        <td>Design</td>
+      </tr>
+      <tr>
+        <td>2021/10/09</td>
+        <td><a href="https://neverworkintheory.org/2021/08/29/software-development-waste.html">Software Development
+            Waste</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2021/10/09</td>
+        <td><a href="https://themarkup.org/blacklight">Blacklight website privacy inspector</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2018/12/30</td>
+        <td><a href="https://www.youtube.com/watch?v=fLJsdqxnZb0&feature=youtu.be">The happy secret to better work by
+            Shawn Achor</a></td>
+        <td>Life</td>
+      </tr>
+      <tr>
+        <td>2018/02/25</td>
+        <td><a href="https://lawsofux.com/">Laws of UX</a></td>
+        <td>Web, Design</td>
+      </tr>
+      <tr>
+        <td>2017/12/20</td>
+        <td><a href="https://documentation.divio.com/">Documentation System</a></td>
+        <td>Documentation</td>
+      </tr>
+      <tr>
+        <td>2017/08/31</td>
+        <td><a href="https://principlesofchaos.org/">Principles of Chaos Engineering</a></td>
+        <td>Testing</td>
+      </tr>
+      <tr>
+        <td>2017/03/28</td>
+        <td><a href="https://standards.usa.gov/">U.S. Web Design Standards</a></td>
+        <td>Web, Design</td>
+      </tr>
+      <tr>
+        <td>2017/02/05</td>
+        <td><a href="https://colorhunt.co/">Color Hunt</a></td>
+        <td>Design</td>
+      </tr>
+      <tr>
+        <td>2016/11/30</td>
+        <td><a href="https://material.io/">Material Design</a></td>
+        <td>Design</td>
+      </tr>
+      <tr>
+        <td>2014/06/16</td>
+        <td><a href="https://www.xrite.com/hue-test">Online Color Challenge</a></td>
+        <td>Fun</td>
+      </tr>
+      <tr>
+        <td>2013/12/30</td>
+        <td><a href="http://www.developsense.com/blog/2012/07/few-hiccupps/">HICCUPPS</a></td>
+        <td>Testing</td>
+      </tr>
+      <tr>
+        <td>2013/11/07</td>
+        <td><a href="https://thehumanfactor.co/7-sins-of-doomed-teams/">7 Sins of Doomed Teams</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2012/09/28</td>
+        <td><a href="https://blog.jbrains.ca/permalink/the-four-elements-of-simple-design">The Four Elements of Simple
+            Design</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2012/08/10</td>
+        <td><a href="https://ianstormtaylor.com/design-tip-never-use-black">Design Tip: Never Use Black by Ian Storm
+            Taylor</a></td>
+        <td>Web,CSS</td>
+      </tr>
+      <tr>
+        <td>2012/08/01</td>
+        <td><a href="https://www.youtube.com/watch?v=CD0y-aU1sXo">Kanban at Microsoft</a></td>
+        <td>Kanban</td>
+      </tr>
+      <tr>
+        <td>2012/01/24</td>
+        <td><a href="https://www.nerdmeritbadges.com/">Nerd Merit Badges - Welcome</a></td>
+        <td>Shopping</td>
+      </tr>
+      <tr>
+        <td>2011/04/12</td>
+        <td><a href="http://ui-patterns.com/">UI-Patterns.com</a></td>
+        <td>Web</td>
+      </tr>
+      <tr>
+        <td>2010/12/17</td>
+        <td><a href="https://lastpass.com/">Last Pass</a></td>
+        <td>Tools,Security</td>
+      </tr>
+      <tr>
+        <td>2010/12/17</td>
+        <td><a href="https://www.martinvigo.com/even-the-lastpass-will-be-stolen-deal-with-it/">Making LastPass more
+            secure</a></td>
+        <td>Tools,Security</td>
+      </tr>
+      <tr>
+        <td>2010/12/17</td>
+        <td><a href="https://keepass.info/">KeePass</a></td>
+        <td>Tools,Security</td>
+      </tr>
+      <tr>
+        <td>2010/11/03</td>
+        <td><a href="https://www.lipsum.com/">Lorem Ipsum - All the facts - Lipsum generator</a></td>
+        <td>Web</td>
+      </tr>
+      <tr>
+        <td>2010/10/16</td>
+        <td><a
+            href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">GitHub
+            Markdown</a></td>
+        <td>Github</td>
+      </tr>
+      <tr>
+        <td>2010/10/07</td>
+        <td><a href="http://winmerge.org">WinMerge</a></td>
+        <td>WinMerge,Git</td>
+      </tr>
+      <tr>
+        <td>2010/08/28</td>
+        <td><a href="https://notepad-plus-plus.org/">NOTEPAD++</a></td>
+        <td>Tools</td>
+      </tr>
+      <tr>
+        <td>2010/08/26</td>
+        <td><a href="https://git-scm.com/">Git - Fast Version Control System</a></td>
+        <td>Git</td>
+      </tr>
+      <tr>
+        <td>2010/08/09</td>
+        <td><a href="https://limitedwipsociety.ning.com">Limited WIP Society - Home of Kanban for Software
+            Development</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2019/02/20</td>
+        <td><a href="https://philosophynow.org/">Philosophy Now</a></td>
+        <td>Learning</td>
+      </tr>
+      <tr>
+        <td>2019/01/12</td>
+        <td><a href="https://www.goodreads.com/">Good Reads</a></td>
+        <td>Learning</td>
+      </tr>
+      <tr>
+        <td>2018/11/14</td>
+        <td><a href="https://www.youtube.com/watch?v=hX2kS3fs_Gk">My CSRIC Commercial</a></td>
+        <td>Fun</td>
+      </tr>
+      <tr>
+        <td>2018/07/27</td>
+        <td><a href="">Thinking Machine Chess</a>http://www.bewitched.com/chess/</td>
+        <td>Fun</td>
+      </tr>
+      <tr>
+        <td>2018/02/25</td>
+        <td><a href="https://www.cse.buffalo.edu//~rapaport/howtostudy.html">How to Study</a></td>
+        <td>Learning</td>
+      </tr>
+      <tr>
+        <td>2017/10/05</td>
+        <td><a href="https://www.kalzumeus.com/2017/09/09/identity-theft-credit-reports/">Identity Theft, Credit
+            Reports, and You</a></td>
+        <td>Life</td>
+      </tr>
+      <tr>
+        <td>2017/03/28</td>
+        <td><a href="https://investorplace.com/category/stock-picks/dividend">InvestorPlace Dividends</a></td>
+        <td>Investing</td>
+      </tr>
+      <tr>
+        <td>2017/03/28</td>
+        <td><a href="https://www.dividendchannel.com">Dividend Channel</a></td>
+        <td>Investing</td>
+      </tr>
+      <tr>
+        <td>2017/03/28</td>
+        <td><a href="https://www.fool.com">The Motley Fool</a></td>
+        <td>Investing</td>
+      </tr>
+      <tr>
+        <td>2017/02/05</td>
+        <td><a href="https://durmonski.com/self-improvement/systems-vs-goals/">Goals vs. Systems</a></td>
+        <td>Life</td>
+      </tr>
+      <tr>
+        <td>2016/10/01</td>
+        <td><a href="https://www.youtube.com/watch?v=fV-E6NoK2L8">Transcendental Granola</a></td>
+        <td>Fun</td>
+      </tr>
+      <tr>
+        <td>2016/08/28</td>
+        <td><a href="https://betterexplained.com/articles/adept-method/">ADEPT method to learn new things</a></td>
+        <td>Learning</td>
+      </tr>
+      <tr>
+        <td>2016/05/23</td>
+        <td><a href="https://www.fourmilab.ch/etexts/www/barnum/moneygetting/">Golden Rules for Making Money in 1880</a>
+        </td>
+        <td>Fun</td>
+      </tr>
+      <tr>
+        <td>2015/12/02</td>
+        <td><a href="https://en.wikipedia.org/wiki/Herbert_Stewart">Major-General Sir Herbert Stewart</a></td>
+        <td>Fun</td>
+      </tr>
+      <tr>
+        <td>2014/07/22</td>
+        <td><a href="https://www.raptitude.com/2014/07/not-giving-a-shit/">The elegant art of not giving a shit</a></td>
+        <td>Mindfulness</td>
+      </tr>
+      <tr>
+        <td>2014/06/20</td>
+        <td><a href="https://rs.io/the-science-of-problem-solving/">The Science of Problem Solving</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2014/04/05</td>
+        <td><a href="https://www.hanselman.com/blog/scott-hanselmans-complete-list-of-productivity-tips">Scott
+            Hanselman's Complete List of Productivity Tips</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2014/01/09</td>
+        <td><a href="https://en.wikibooks.org/wiki/Seven_Habits_Study_Guide/Quick_overview_of_the_seven_habits">Seven
+            Habits Study Guide</a></td>
+        <td>Books</td>
+      </tr>
+      <tr>
+        <td>2013/10/16</td>
+        <td><a href="https://en.wikipedia.org/wiki/Wabi-sabi">Wabi-sabi - Wikipedia</a></td>
+        <td>Design</td>
+      </tr>
+      <tr>
+        <td>2012/09/28</td>
+        <td><a href="https://gokhalemethod.com/">Gokhale Method pain-free back, neck, hips, knees, feet</a></td>
+        <td>Health</td>
+      </tr>
+      <tr>
+        <td>2012/08/21</td>
+        <td><a href="http://www.aaronsw.com/weblog/dweck">Believe you can change</a></td>
+        <td>Teaching,Development</td>
+      </tr>
+      <tr>
+        <td>2012/04/24</td>
+        <td><a href="https://ninjasandrobots.com/you-need-some-experience">I have no idea what I'm doing by Nathan
+            Kontny</a></td>
+        <td>Development</td>
+      </tr>
+      <tr>
+        <td>2010/11/24</td>
+        <td><a href="https://personalexcellence.co/blog/10000-hours/">10,000 Hours To Develop Talent</a></td>
+        <td>Teaching</td>
+      </tr>
+      <tr>
+        <td>2010/09/30</td>
+        <td><a href="https://nist.time.gov/">The official US time</a></td>
+        <td>Tools</td>
+      </tr>
+      <tr>
+        <td>2010/09/22</td>
+        <td><a href="https://www.gotquestions.org/Romans-road-salvation.html">What is the Romans Road to salvation?</a>
+        </td>
+        <td>Religion</td>
+      </tr>
+      <tr>
+        <td>2010/07/05</td>
+        <td><a href="https://www.amazon.com/Mastery-Keys-Success-Long-Term-Fulfillment/dp/0452267560">Mastery by George
+            Leonard</a></td>
+        <td>Development,Books</td>
+      </tr>
+      </table>
+  </main>
+  <!-- Include Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- Datatables JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script>
+    $('#links-grid').DataTable({
+      order: [[0, 'desc']],
+      paging: false
+    });
+  </script>
+</body>
+
+</html>
