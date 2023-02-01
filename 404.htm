@@ -7,51 +7,30 @@
   <meta name="msapplication-tap-highlight" content="no" />
   <meta name="msapplication-TileColor" content="#10a51d" />
   <meta name="theme-color" content="#10a51d" />
-  <meta name="Description" content="A list of articles I have writtem." />
-  <title>StewShack - Articles</title>
+  <meta name="Description" content="Page cannot be found" />
+  <title>StewShack - 404</title>
   <link rel="author" href="/humans.txt" />
   <link rel="sitemap" href="/sitemap.xml" />
   <!-- Include Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-  <!-- Include DataTables CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/datatables.min.css" />
 </head>
 
 <body>
   <header class="d-flex justify-content-center py-3">
     <ul class="nav nav-pills">
-      <li class="nav-item"><a href="index.htm" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="index.htm" class="nav-link active" aria-current="page">Home</a></li>
       <li class="nav-item"><a href="about.htm" class="nav-link">About Me</a></li>
       <li class="nav-item"><a href="resume.htm" class="nav-link">Resume</a></li>
-      <li class="nav-item"><a href="articles.htm" class="nav-link active" aria-current="page">Articles</a></li>
+      <li class="nav-item"><a href="articles.htm" class="nav-link">Articles</a></li>
     </ul>
   </header>
   <main class="container">
-    <h1>Articles</h1>
-    <table id="articles-grid" class="table table-striped table-hover table-light" style="width:100%">
-      <thead>
-        <tr>
-          <th>Date (YYYY-MM-DD)</th>
-          <th>Title</th>
-          <th>Tags</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2023-01-28</td>
-          <td><a href="links.htm">Links</a></td>
-          <td>Fun</td>
-        </tr>
-        <tr>
-          <td>2018-11-19</td>
-          <td><a href="brew.htm">Homebrewing Beer</a></td>
-          <td>Fun</td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
+    <h1>404 Page not Found</h1>
+<p>
+The page you are looking for cannot be found.
+</p>
+</main>
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
@@ -66,7 +45,8 @@
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li class="ms-3">
           <a class="text-muted" href="links.htm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" 
+            class="bi bi-link-45deg" viewBox="0 0 16 16">
               <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
               <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
             </svg>
@@ -98,15 +78,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-  <!-- Datatables JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-  <script>
-    $('#articles-grid').DataTable({
-      order: [[0, 'desc']],
-      paging: false
-    });
-  </script>
 </body>
 
 </html>
