@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="msapplication-TileColor" content="#10a51d" />
+  <meta name="theme-color" content="#10a51d" />
+  <meta name="Description" content="Using tables and parameters with Jasper reports" />
+  <title>StewShack - Jasper Reports Tables and Parameters</title>
+  <link rel="author" href="/humans.txt" />
+  <link rel="sitemap" href="/sitemap.xml" />
+  <!-- Include Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <!-- HighlightJS -->
+  <link href="../darcula.min.css" rel="stylesheet" />
+  <!-- Bootstrap Overrides and Site CSS -->
+  <link href="../site.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="d-flex justify-content-center py-3  bg-header border-bottom border-primary">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="../index.htm" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="../about.htm" class="nav-link">About Me</a></li>
+      <li class="nav-item"><a href="../resume.htm" class="nav-link">Resume</a></li>
+      <li class="nav-item"><a href="../articles.htm" class="nav-link active" aria-current="page">Articles</a></li>
+    </ul>
+  </header>
+  <main class="container">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <a href="https://artvee.com/dl/zur-farbenlehre-pl-10#00"><img src="../images/sql/910716ilsdl.jpg"
+              class="d-block mx-lg-auto img-fluid" alt="Zur Farbenlehre Pl.10 (1810)" width="700" height="893"
+              loading="lazy" /></a>
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Jasper Reports Tables and Parameters</h1>
+          <p class="lead">
+            By: Dan Stewart<br />
+            August 30, 2016<br /><br />
+            I was asked to create a <a href="https://community.jaspersoft.com/">Jasper Report</a> that has a parameter
+            that will be dynamically generated
+            from a database query.<br /><br />
+            This is how I passed that parameter to a table inside the report to get the results.
+          </p>
+        </div>
+      </div>
+    </div>
+    <h2>Prerequisites</h2>
+    <p>
+      First you need to have Jasper Server and TIBCO Jaspersoft Studio installed.
+    </p>
+    <p>
+      A data adapter needs to be connected to the database.
+    </p>
+    <h3>Step One – Create the Report</h3>
+    <p>
+      In Studio open the Project Explorer. We will create the report locally first, and
+      then we will deploy it to the server.
+    </p>
+    <p>
+      Right-click on MyReports and add a new Jasper Report.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/new-jasper-report.png" alt="New Jasper Report" />
+    </p>
+    <p>
+      In the New Report Wizard, choose a blank template.
+    </p>
+    <p>
+      Give your report a name.
+    </p>
+    <p>
+      Choose a data adapter and enter a bogus query. I used
+    </p>
+    <pre><code class="language-sql">
+SELECT 'Hello' AS World
+</code></pre>
+    <p>
+      We need this so that the main report runs.
+    </p>
+    <p>
+      Click Finish.
+    </p>
+    <p>
+      You now see a blank report.
+    </p>
+    <p>
+      In the Palette, scroll down and add a table to the report.
+    </p>
+    <p>
+      The Table Wizard will be displayed.
+    </p>
+    <p>
+      Create the table using a new dataset.
+    </p>
+    <p>
+      Give your dataset a name and choose to create it from a connection.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/dataset-name.png" alt="Dataset name" />
+    </p>
+    <p>
+      Choose the data adapter and enter the real query with a where clause that will return nothing.
+    </p>
+    <p>
+      We will update this later to use a parameter.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/dataset-query.png" alt="Dataset query" />
+    </p>
+    <p>
+      Move over your fields that you want in the report table.
+    </p>
+    <p>
+      Choose any fields that you want to group by.
+    </p>
+    <p>
+      Use the same connection as the master report.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/dataset-connection.png" alt="Dataset connection" />
+    </p>
+    <p>
+      Choose the fields that you want to use as table headers.
+    </p>
+    <p>
+      Choose the table style.
+    </p>
+    <p>
+      Click Finish
+    </p>
+    <p>
+      You have added a table to the main report.
+    </p>
+    <p>
+      Adjust the table as needed inside the report.
+    </p>
+    <p>
+      If you preview the report, it should be blank.
+    </p>
+    <p>
+      In the main report add a parameter.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/main-report-param.png" alt="Main report param" />
+    </p>
+    <p>
+      Give it a name that shows that it is in the main report.
+    </p>
+    <p>
+      I like to follow the convention of ColumnNameMainParam.
+    </p>
+    <p>
+      Leave it as a java.lang.String for now. We will update this later.
+    </p>
+    <p>
+      Provide a description.
+    </p>
+    <p>
+      Leave "Is For Prompting" checked as we will be asking the user for this parameter.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/main-report-param-1.png" alt="Main report param" />
+    </p>
+    <p>
+      In your table dataset, add a parameter.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/dataset-add-param.png" alt="Dataset add param" />
+    </p>
+    <p>
+      Give it a name that shows that it is in the table.
+    </p>
+    <p>
+      I like to follow the convention of ColumnNameTableParam.
+    </p>
+    <p>
+      You do not need to add a description.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/dataset-param.png" alt="Dataset param" />
+    </p>
+    <p>
+      Now we need to pass the value prompted from the main report to the table.
+    </p>
+    <p>
+      This connection is made in the properties of the table under the dataset tab.
+    </p>
+    <p>
+      Click Parameters.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/table-properties.png" alt="Table properties" />
+    </p>
+    <p>
+      Add the relationship between the main report parameter and the table parameter.
+    </p>
+    <p>
+      You do this by clicking add, choosing the table parameter from the dropdown, editing the parameter expression,
+      choosing the main report parameter.
+    </p>
+    <p>
+      Click Finish or Ok or whatever it takes to return to the report.
+    </p>
+    <p>
+      Here is a picture that is worth a thousand words.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/table-param-map.png" alt="Table param map" />
+    </p>
+    <p>
+      Now that we linked a main parameter to the table, we need to use the parameter.
+    </p>
+    <p>
+      Edit the table dataset query.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/dataset-query-1.png" alt="Dataset query" />
+    </p>
+    <p>
+      Add the table parameter to the query.
+    </p>
+    <pre><code class="language-sql">
+SELECT ShackID,
+  Name,
+  Location,
+  Occupied
+FROM Shack
+WHERE Location = $P{LocationTableParam}
+ORDER BY Name
+</code></pre>
+    <p>
+      Preview the report and make sure the parameter works.
+    </p>
+    <p>
+      You should now see data on the preview.
+    </p>
+    <h3>Step 2 – Publish the Report</h3>
+    <p>
+      Your server should be set up and Studio should have a connection to it.
+    </p>
+    <p>
+      Publish the report by going to the Project menu and choosing "Publish the file on JasperReports Server".
+    </p>
+    <p>
+      The Report Publishing Wizard will appear.
+    </p>
+    <p>
+      Go through the Wizard steps choosing a location on the server, publishing the report resources, choosing a
+      datasource, and do not link a query.
+    </p>
+    <p>
+      Click Finish
+    </p>
+    <p>
+      You should see your report in the Repository Explorer.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/repository-exporer.png" alt="Repository exporer" />
+    </p>
+    <h3>Step 3 – Convert the input control</h3>
+    <p>
+      If you expand the report, you will see the input control for the main report parameter.
+    </p>
+    <p>
+      We will convert this simple textbox control to a data driven dropdown.
+    </p>
+    <p>
+      This dropdown will only allow one choice. Later we will change this to allow for multiple choices.
+    </p>
+    <p>
+      You can double-click the control to show its properties.
+    </p>
+    <p>
+      From here you can make the dropdown mandatory and choose Single Select Query as the type.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/edit-resource.png" alt="Edit resource" />
+    </p>
+    <p>
+      Click the &hellip; under Local Resource.
+    </p>
+    <p>
+      This will launch the Resource Editor dialog.
+    </p>
+    <p>
+      Choose a data source from the repository.
+    </p>
+    <p>
+      Enter the query that will populate the dropdown.
+    </p>
+    <pre><code class="language-sql">
+SELECT DISTINCT Location FROM Shack ORDER BY Location
+</code></pre>
+    <p>
+      Click Finish
+    </p>
+    <p>
+      On the Value &amp; Visible Columns, add the value you want to use to pass into the report.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/edit-resource-value.png" alt="Edit resource" />
+    </p>
+    <p>
+      Click Finish
+    </p>
+    <p>
+      You have now changed the input control that will be used to pass in a parameter to the report.
+    </p>
+    <p>
+      You can control how input controls work from the report properties input controls tab.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/report-properties.png" alt="Report properties" />
+    </p>
+    <p>
+      Run the report from the server to test it.
+    </p>
+    <p>
+      You should be prompted to enter a location. The values in the dropdown will be generated from the query you gave.
+    </p>
+    <h3>Optional – Allow for multiple values</h3>
+    <p>
+      The users of the report want to enter multiple values into the parameter.
+    </p>
+    <p>
+      Open the report from the project explorer. We will make our changes and publish the report when we are done.
+    </p>
+    <p>
+      We need to change the type of parameter we are using to a collection so that it can accept multiple values.
+    </p>
+    <p>
+      View the properties of the main report parameter and change it to be a java.util.Collection class.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/main-report-param-multi.png" alt="Main report param multi" />
+    </p>
+    <p>
+      Do the same for the table parameter.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/table-param-multi.png" alt="Table param multi" />
+    </p>
+    <p>
+      Update the table dataset query to use an IN statement.
+    </p>
+    <pre><code class="language-sql">
+SELECT ShackID,
+  Name,
+  Location,
+  Occupied
+FROM Shack
+WHERE $X{IN, Location, LocationTableParam}
+ORDER BY Name
+</code></pre>
+    <p>
+      Previewing the report allows you to enter multiple values.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/input-params-multi.png" alt="Input params multi" />
+    </p>
+    <p>
+      Publish the report.
+    </p>
+    <p>
+      Be sure to overwrite the parameter.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/publish-param.png" alt="Publish param" />
+    </p>
+    <p>
+      Open the properties of the parameter through the repository explorer.
+    </p>
+    <p>
+      We will change this to Multi Select Query checkbox.
+    </p>
+    <p>
+      The we will enter in the data source and query as we did when it was a single select.
+    </p>
+    <p>
+      <img src="../images/sql/jasper/edit-resource-multi.png" alt="Edit resource multi" />
+    </p>
+    <p>
+      Click finish and view the report on the server.
+    </p>
+    <p>
+      You should now see a multi select checkbox control that is built from values in the database.
+    </p>
+    <h3>Lessons Learned</h3>
+    <p>
+      If you change and save your report through project explorer, a dialog will appear asking if you want to publish
+      it.
+    </p>
+    <p>
+      Click No and never ask me again.
+    </p>
+    <p>
+      If you click yes, the input control you worked so hard on will be overwritten.
+    </p>
+    <p>
+      It is best to publish the report through the project menu and choose if you want to overwrite the parameter or
+      not.
+    </p>
+    <p>
+      Save your queries that were used to generate the report parameters in case you have to rebuild them.
+    </p>
+    <p>
+      If your parameter is a date and you want it to be all inclusive, modify the SQL with this:
+    </p>
+    <pre><code class="language-sql">
+DATEADD(DAY, DATEDIFF(DAY, 0, $P{StartDateTableParam}), 0)
+DATEADD(DAY, 1, DATEADD(DAY, DATEDIFF(DAY, 0, $P{EndDateTableParam}), 0))
+</code></pre>
+  </main>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
+      <div class="col-md-4 d-flex align-items-center">
+        <p>Site content available under the <a href="https://mit-license.org/">MIT license</a>.</p>
+      </div>
+      <div class="col-md-4 d-flex align-items-center">
+        <p>Thank you <a href="https://docs.github.com/en/pages">GitHub Pages</a>, <a
+            href="https://artvee.com/">Artvee</a>,
+          <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>,
+          <a href="https://highlightjs.org/">Highlight.js</a>.
+        </p>
+      </div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href="links.htm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-link-45deg"
+              viewBox="0 0 16 16">
+              <path
+                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+              <path
+                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://www.linkedin.com/in/stewshack">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://github.com/StewShack/stewshack.github.io">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://www.goodreads.com/user/show/92068618-dan-stewart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-book"
+              viewBox="0 0 16 16">
+              <path
+                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!-- Include Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- HighlightJS -->
+  <script src="../highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
