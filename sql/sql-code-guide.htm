@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="msapplication-TileColor" content="#10a51d" />
+  <meta name="theme-color" content="#10a51d" />
+  <meta name="Description" content="How I style my SQL code" />
+  <title>StewShack - SQL Code Style Guide</title>
+  <link rel="author" href="/humans.txt" />
+  <link rel="sitemap" href="/sitemap.xml" />
+  <!-- Include Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <!-- HighlightJS -->
+  <link href="../darcula.min.css" rel="stylesheet" />
+  <!-- Bootstrap Overrides and Site CSS -->
+  <link href="../site.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="d-flex justify-content-center py-3  bg-header border-bottom border-primary">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="../index.htm" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="../about.htm" class="nav-link">About Me</a></li>
+      <li class="nav-item"><a href="../resume.htm" class="nav-link">Resume</a></li>
+      <li class="nav-item"><a href="../articles.htm" class="nav-link active" aria-current="page">Articles</a></li>
+    </ul>
+  </header>
+  <main class="container">
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <a href="https://artvee.com/dl/farbstudie-mit-rauten#00"><img src="../images/sql/100671absdl.jpg"
+              class="d-block mx-lg-auto img-fluid" alt="Farbstudie mit Rauten (1913)" width="700" height="882"
+              loading="lazy" /></a>
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">SQL Code Style Guide</h1>
+          <p class="lead">
+            By: Dan Stewart<br />
+            Created: February 10, 2016<br />
+            Updated: February 4, 2023<br /><br />
+            This is how I like to write SQL code.
+          </p>
+        </div>
+      </div>
+    </div>
+    <h2>Source Code File Organization</h2>
+    <p>
+      Source code files should contain only one SQL object definition with the file name being the same name as the
+      object name. For example,
+      if the object name is spShackListingByID the file name would be spShackListingByID.sql.
+    </p>
+    <h2>Stored Procedures</h2>
+    <pre><code class="language-sql">
+CREATE PROCEDURE spShackListingByID
+(
+  Param1,
+  Param2
+)
+
+AS
+
+Query
+
+GO
+</code></pre>
+
+    <h2>Indentation</h2>
+    <p>
+      Spaces, not tabs. Tabs are measured differently by different editors, but spaces are uniform.
+    </p>
+    <h2>Commas</h2>
+    <p>
+      Commas go at the end of a line except if used in a method.
+    </p>
+    <pre><code class="language-sql">
+SELECT s.ShackID AS [ID],
+  Name AS [Shack Name]
+</code></pre>
+    <p>
+      Method commas do not need to be on their own line.
+    </p>
+    <pre><code class="language-sql">
+REPLACE(
+  REPLACE(
+    CAST(@LineBreaksInTextField AS VARCHAR(MAX)), CHAR(13), ' '), CHAR(10), ' ')
+</code></pre>
+
+    <h2>Line Length</h2>
+    <p>
+      Break up lines as needed to avoid horizontal scrolling. The section on Wrapping Lines will help.
+    </p>
+    <pre><code class="language-sql">
+REPLACE(REPLACE(CAST(@LineBreaksInTextField AS VARCHAR(MAX)), CHAR(13), ' '), CHAR(10), ' ')
+
+--If it is too long, break on a comma.
+
+REPLACE(REPLACE(CAST(@LineBreaksInTextField AS VARCHAR(MAX)), 
+  CHAR(13), ' '), 
+  CHAR(10), ' ')
+</code></pre>
+
+    <h2>Wrapping Lines</h2>
+    <p>
+      New line general principles:
+    </p>
+    <ol>
+      <li>Break after a comma</li>
+      <li>Break at the end of SELECT statement</li>
+      <li>Break at the end of CASE</li>
+      <li>Break at the end of WHEN THEN statement</li>
+      <li>Break at the end of ELSE statement</li>
+      <li>Break at the end of FROM statement</li>
+      <li>Break at the end of JOIN statement</li>
+      <li>Break at the end of WHERE statement</li>
+      <li>Break at the end of AND/OR statement</li>
+      <li>Break at the end of ORDER BY statement</li>
+      <li>Break at the end of GROUP BY statement</li>
+      <li>Break at the end of HAVING statement</li>
+    </ol>
+    <h2>Wrapping Lines Example</h2>
+
+    <pre><code class="language-sql">
+SELECT COUNT(s.ShackID),
+  CASE 
+    WHEN s.HasWater = 1 THEN 'Move in ready'
+    ELSE 'Fix er upper'
+  END as [Good Shack],
+  o.Name
+FROM Shack s
+  JOIN Renter r ON r.RenterID = s.RenterID
+    AND r.Type = 'Human'
+WHERE s.ZipCode = '80112'
+GROUP BY s.HasWater,
+  r.Name
+HAVING COUNT(s.ShackID) > 1
+</code></pre>
+
+    <h2>Comments</h2>
+    <p>
+      The comments I usually see involve explaining variables and why they have the value they do.
+    </p>
+    <p>
+      SQL queries can have two kinds of comments: block comments and line comments. Block comments
+      are delimited by /*...*/, and line comments are --.
+    </p>
+    <p>
+      Avoid adding comments at the end of a line of code. Here be dragons...
+    </p>
+    <pre><code class="language-sql">
+UPDATE Shack SET HasWater = 1 -- Yeah water! WHERE ShackID = 5
+</code></pre>
+    <p>
+      Because the comment was added on the same line as the code, the WHERE clause was commented out.
+      Now all of the shacks have water instead of just the one with ID = 5. I've seen this happen. It's not fun.
+    </p>
+    <p>
+      Avoid surrounding a block comment with a frame. It may look nice, but it is hard to maintain.
+    </p>
+    <pre><code class="language-sql">
+/* ()xxxx{:::::::::::::::::::::::::
+If you add anything to this comment,
+you have to lengthen the swords.
+()===[]{::::::::::::::::::::::::::: */
+</code></pre>
+    <p>
+      Comments can create zombie code. This is dead code, but if you check it in, it will live an undead existence.
+      Remove zombie code before you check in.
+    </p>
+    <pre><code class="language-sql">
+SELECT *
+FROM Shack
+WHERE Zip = '80112'
+-- AND OccupantType = 'Zombie'
+</code></pre>
+
+    <h2>Declarations</h2>
+    <p>
+      One declaration per line is recommended.
+    </p>
+    <pre><code class="language-sql">
+DECLARE @ShackID INT,
+  @OccupantType VARCHAR(25),
+  @HasWater BIT
+</code></pre>
+    <p>
+      Put variables only at the beginning of the query.
+    </p>
+    <pre><code class="language-sql">
+CREATE PROCEDURE spShackListings
+(
+  @OccupantType VARCHAR(25),
+  @HasWater BIT
+)
+
+AS
+
+DECLARE @StartDate DATETIME,
+  @EndDate DATETIME
+
+SET @StartDate = GETDATE() - 1
+SET @EndDate = GETDATE()
+</code></pre>
+
+    <h2>White Space</h2>
+
+    <h3>Blank Lines</h3>
+    <p>
+      Blank lines go:
+    </p>
+    <ol>
+      <li> Before the SELECT in a stored procedure</li>
+      <li> Before and after a UNION</li>
+      <li> Before and after the GO</li>
+      <li> Before and after a block comment</li>
+      <li> Before and after declaring local variables</li>
+      <li> Before and after setting all of the local variables</li>
+    </ol>
+    <p>
+      Blank spaces go:
+    </p>
+    <ol>
+      <li> After a comma</li>
+      <li> Before and after an operator (= + - * /)</li>
+    </ol>
+    <h2>Naming Rules</h2>
+    <p>
+      There are only two hard problems in computer science.
+    </p>
+    <ol>
+      <li>Naming things</li>
+      <li>Cache invalidation</li>
+      <li>Off-by-one errors</li>
+    </ol>
+    <p>
+      Don't get stuck in analysis paralysis with names.
+      Go to <a href="https://schema.org/">schema.org</a>.
+      If you can't find something there, name the object the first thing that comes to mind and change it later.
+    </p>
+    <h2>Objects</h2>
+    <ol>
+      <li> Objects such as stored procedures start with "sp".</li>
+      <li> Contain no special characters such as an underscore.</li>
+      <li> Are camel cased such as spShackListings.</li>
+    </ol>
+    <h2>Naming Variables</h2>
+    <ol>
+      <li> Do not use Hungarian notation for variable names.</li>
+      <li> Start with the function name if needed. For example: AvgShackRating, SumRenterShacks, MinMoveInDate, or
+        MaxMoveOutDate.</li>
+      <li> Use opposites in variable names, such as Start/End.</li>
+      <li> Collections should be named as the plural form of the singular objects that the collection contains. A
+        collection of Shack objects is named Shacks.</li>
+      <li> Boolean variable should imply Yes/No; True/False values, such as @HasWater, @IsFallingApart, or
+        @ContainsAsbestos.</li>
+    </ol>
+    <h2>Tables</h2>
+    <ol>
+      <li> When naming tables, express the name in the singular form. For example, use Shack instead of Shacks.</li>
+      <li> When naming columns of tables, do not repeat the table name except for the primary key, for example, if the
+        table is Shack, the primary key is ShackID. The other columns should not be named ShackName or ShackHasWater.
+      </li>
+    </ol>
+    <h2>Microsoft SQL Server</h2>
+    <ol>
+      <li> Do not prefix stored procedures with sp_, because this prefix is reserved for identifying system-stored
+        procedures.</li>
+      <li> In Transact-SQL, do not prefix variables with @@, because they should be used for variables such as
+        @@IDENTITY.</li>
+    </ol>
+    <h2>Capitalization</h2>
+    <p>
+      Pascal case - The first letter and the first letter of each word are capitalized. For example: HasWater.
+    </p>
+    Camel case - The first letter of an identifier is lowercase and the first letter of each subsequent concatenated
+    word is capitalized.
+    </p>
+    <p>
+      For example: spShackListings.
+    </p>
+    <p>
+      All Caps - All letters in the identifier are capitalized. For example: SELECT
+    </p>
+    <p>
+      The following table provides rules and example for common identifiers:
+    </p>
+    <table id="identifiers-grid" class="table table-striped table-hover table-light" style="width:100%">
+      <thead>
+        <tr>
+          <th>Identifier Type</th>
+          <th>Rules for Naming</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SQL</td>
+          <td>All Caps</td>
+          <td>SELECT FROM WHERE</td>
+        </tr>
+        <tr>
+          <td>TSQL Functions</td>
+          <td>All Caps</td>
+          <td>GETDATE() MIN() MAX()</td>
+        </tr>
+        <tr>
+          <td>Objects</td>
+          <td>Pascal case</td>
+          <td>HasWater</td>
+        </tr>
+        <tr>
+          <td>Stored Procedures</td>
+          <td>Camel case</td>
+          <td>spShackListings</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Common Functions</h2>
+
+    <h3>Date Ranges</h3>
+
+    <pre><code class="language-sql">
+CREATE PROCEDURE spShackMoveInDates
+(
+  @StartDate DATETIME,
+  @EndDate DATETIME
+)
+
+AS
+
+SET @StartDate = DATEADD(DAY, DATEDIFF(DAY, 0, @StartDate), 0)
+SET @EndDate = DATEADD(DAY, 1, DATEADD(DAY, DATEDIFF(DAY, 0, @EndDate), 0))
+
+SELECT *
+FROM Shack
+WHERE MoveInDate &gt;= @StartDate AND MoveInDate &lt; @EndDate
+
+GO
+</code></pre>
+
+    <h3>Multiple Values</h3>
+
+    <pre><code class="language-sql">
+DECLARE @LastNames VARCHAR(MAX),
+  @RemainingLastNames NVARCHAR(MAX),
+  @CommaIndex INT,
+  @LastName NVARCHAR(250)
+
+DECLARE @LastNameTable TABLE (LastName VARCHAR(250))
+
+SET @LastNames = 'Stewart,Stuart'
+SET @RemainingLastNames = @LastNames
+SET @CommaIndex = CHARINDEX(',', @RemainingLastNames)
+
+WHILE (LEN(@RemainingLastNames) &gt; 0) BEGIN
+  IF @CommaIndex &gt; 0 BEGIN
+    SET @LastName = LEFT(@RemainingLastNames, @CommaIndex - 1)
+  END
+  ELSE BEGIN
+    SET @LastName = @RemainingLastNames
+  END
+
+  INSERT INTO @LastNameTable (LastName) VALUES (RTRIM(LTRIM(@LastName)))
+
+  IF @CommaIndex &gt; 0 BEGIN
+    SET @RemainingLastNames = RIGHT(@RemainingLastNames, LEN(@RemainingLastNames) - @CommaIndex)
+  END
+  ELSE BEGIN
+    SET @RemainingLastNames = ''
+  END
+
+  SET @CommaIndex = CHARINDEX(',', @RemainingLastNames)
+END
+
+SELECT *
+FROM Renter r
+  JOIN @LastNameTable t ON t.LastName = r.LastName
+</code></pre>
+
+    <h3>Best, Latest</h3>
+    <p>
+      Find the latest shack rented for each renter.
+    </p>
+    <pre><code class="language-sql">
+SELECT r.MoveInDate,
+  s.Name
+FROM Shack s
+  JOIN Renter r ON r.RenterID = s.RenterID
+  JOIN (
+    SELECT ROW_NUMBER() OVER (PARTITION BY r.RenterID ORDER BY s.MoveInDate DESC) AS Ordinal,
+      s.ShackID
+    FROM Shack s
+      JOIN Renter r ON r.RenterID = s.RenterID) LastShackRented ON LastShackRented.ShackID = s.ShackID
+        AND LastShackRented.Ordinal = 1
+    WHERE s.MoveInDate &gt; '1/1/2016'
+ORDER BY s.MoveInDate
+</code></pre>
+
+    <h3>Concatenating into a Single Column for Custom Data</h3>
+
+    <pre><code class="language-sql">
+SELECT (SELECT ISNULL(r.FirstName, '') + ISNULL(r.Name, '') AS [data()]
+FROM Renter r
+  JOIN Shack s ON s.RenterID = r.RenterID
+WHERE r.RenterID = rn.RenterID
+FOR XML PATH('')) AS [Custom Info]
+  FROM Renter rn
+  WHERE rn.RenterID = 123
+</code></pre>
+  </main>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
+      <div class="col-md-4 d-flex align-items-center">
+        <p>Site content available under the <a href="https://mit-license.org/">MIT license</a>.</p>
+      </div>
+      <div class="col-md-4 d-flex align-items-center">
+        <p>Thank you <a href="https://docs.github.com/en/pages">GitHub Pages</a>, <a
+            href="https://artvee.com/">Artvee</a>,
+          <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>,
+          <a href="https://highlightjs.org/">Highlight.js</a>.
+        </p>
+      </div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href="links.htm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-link-45deg"
+              viewBox="0 0 16 16">
+              <path
+                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+              <path
+                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://www.linkedin.com/in/stewshack">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://github.com/StewShack/stewshack.github.io">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="https://www.goodreads.com/user/show/92068618-dan-stewart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-book"
+              viewBox="0 0 16 16">
+              <path
+                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!-- Include Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- HighlightJS -->
+  <script src="../highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
