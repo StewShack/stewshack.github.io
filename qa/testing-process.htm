@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="msapplication-TileColor" content="#10a51d" />
+    <meta name="theme-color" content="#10a51d" />
+    <meta name="Description" content="My testing process based on a lot of books, blogs, and experience" />
+    <title>StewShack - Testing Process</title>
+    <link rel="author" href="/humans.txt" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <!-- HighlightJS -->
+    <link href="../darcula.min.css" rel="stylesheet" />
+    <!-- Bootstrap Overrides and Site CSS -->
+    <link href="../site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="d-flex justify-content-center py-3  bg-header border-bottom border-primary">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="../index.htm" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="../about.htm" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="../resume.htm" class="nav-link">Resume</a></li>
+            <li class="nav-item"><a href="../articles.htm" class="nav-link active" aria-current="page">Articles</a></li>
+        </ul>
+    </header>
+    <main class="container">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <a href="https://artvee.com/dl/renaissance-no-5/#00"><img src="../images/qa/904375ilsdl.jpg"
+                            class="d-block mx-lg-auto img-fluid" alt="Renaissance No.5 (1856)" width="700" height="1048"
+                            loading="lazy" /></a>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Testing Process</h1>
+                    <p class="lead">
+                        By: Dan Stewart<br />
+                        Created: April 11, 2016<br />
+                        Updated: December 05, 2018<br /><br />
+                        Here is my testing process.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Overview</h2>
+        <p>
+            My testing process is made up of:
+        </p>
+        <ol>
+            <li><span style="font-weight: bold;">Test</span> Notes</li>
+            <li><span style="font-weight: bold;">Test</span> Basis</li>
+            <li><span style="font-weight: bold;">Test</span> Plan</li>
+            <li><span style="font-weight: bold;">Test</span> Suite</li>
+            <li><span style="font-weight: bold;">Test</span> Case</li>
+        </ol>
+        <p>
+            This is my process, but maybe reading about it will help you too. I'm going to add some humor to make it
+            entertaining.
+            At work I'm much more professional.
+        </p>
+        <p>
+            The test notes are my best friend. They prove that I tested. They show how I tested, and they help me
+            improve my techniques
+            as a tester. The test basis is often called the oracle of truth. It is the foundation from which I build my
+            tests. The test
+            plan gives me the when, how, and what I will test. The test suite is a collection of test cases that I will
+            perform.
+        </p>
+        <p>
+        <h2>Test Notes</h2>
+        <p>
+            When someone asks me to test something, the first thing I do is start my notes. I want to write down who
+            asked me to test,
+            when I can test, when I will be done, what will be tested, and how I will get paid. These notes can be
+            copied and pasted
+            into the test plan later.
+        </p>
+        <h2>Test Basis</h2>
+        <p>
+            I prefer calling it the test basis as opposed to the oracle. At my work, Oracle&reg; is software, not a
+            source of truth. I look
+            for documentation, statutes, policies, and procedures. Software is written to enforce these policies. When a
+            policy changes, the
+            software has to change. When software is changed, testers make sure the change agrees with the new policies.
+            They perform regression
+            testing to make sure that existing policies are still enforced.
+        </p>
+        <p>
+            Sometimes, I get to write the policy because a question arises before the testing begins. The exciting thing
+            about writing a policy is
+            that it will outlive the software. I created it based on conversations I had with subject matter experts. I
+            contacted the stakeholders
+            and had them agree to the policy. Once they agreed, the developers enforced it in the software. I discovered
+            a policy, got it approved,
+            and saw it in development.
+        </p>
+        <p>
+            I see policies as the foundation of my testing. If I have a question, I get an answer. Then I document it
+            and test for it.
+            I am finding truth. It is very rewarding.
+        </p>
+        <blockquote>
+            The truth is rarely pure and never simple.<br /><br />
+            Oscar Wilde, <a href="https://www.amazon.com/Importance-Being-Earnest-Oscar-Wilde/dp/1717968007">The
+                Importance of Being Earnest</a>
+        </blockquote>
+        <p>
+            Some say, "there is no truth." To them I ask, "is that true?"
+        </p>
+        <p>
+            I believe there is truth. If what we thought was true changes, the truth did not change. Truth cannot change
+            or else it would not be true.
+            Only our understanding of the truth has changed. When I test, my goal is to reach an acceptable level of
+            truth. That acceptable level
+            is dependent upon the time, knowledge, and consequences that a lie would have on others.
+        </p>
+        <h2>Test Plan</h2>
+        <p>
+            My test plan includes:
+        </p>
+        <ul>
+            <li>Who hired me?</li>
+            <li>What do they expect?</li>
+            <li>When can I start?</li>
+            <li>When do I stop?</li>
+            <li>What do I need to test?</li>
+            <li>How do I test it?</li>
+            <li>What is my deliverable from the testing?</li>
+        </ul>
+        <h2>Test Suite</h2>
+        <p>
+            I am seeking the truth when I test. Scientists seek truth using the <a
+                href="https://en.wikipedia.org/wiki/Scientific_method">scientific method</a>.
+            A test suite asks a <span style="font-weight: bold;">question</span>. To answer this question a <span
+                style="font-weight: bold;">hypothesis</span> is formed. Each hypothesis is a test case because a
+            hypothesis can
+            be either proven or disproven. Testers <span style="font-weight: bold;">predict</span> that the software
+            will fail. They go in with the belief that the software will not work
+            so that they are looking for the way it will fail. It is a state of mind. The <span
+                style="font-weight: bold;">testing</span> begins. <span style="font-weight: bold;">Observations</span>
+            are made and carefully recorded.
+            <span style="font-weight: bold;">Experiments</span> are conducted and scripted so that the results are
+            repeatable. An <span style="font-weight: bold;">analysis</span> is made to reveal the answer to the
+            question.
+            The hypothesis is proven or disproven. Another question is formed and the process begins again.
+        </p>
+        <p>
+            Let me show you.
+        </p>
+        <h3>Shack Data Entry</h3>
+        <p>
+            (Link to the test basis)
+        </p>
+        <p>
+            Administrators need to enter data on a shack. Some of the data is required. Some of the data is validated.
+            If these validations are broken, data
+            corruption can occur. Shacks could be built without roofs. Renters could move into a shack without a front
+            door. Panic, riots, unicorns dancing
+            in the street. Is the data entry form working correctly?
+        </p>
+        <p>
+            Preconditions
+        </p>
+        <ul>
+            <li>The shack data entry software must be running.</li>
+            <li>The administrator must have privileges to create, read, update, and/or delete a shack entry.</li>
+        </ul>
+        <p>
+            Required fields:
+        </p>
+        <ul>
+            <li>Shack ID</li>
+            <li>Address</li>
+            <li>City</li>
+            <li>State</li>
+            <li>Zip</li>
+            <li>Secure Door (Y/N)</li>
+            <li>Roof Materials</li>
+            <li>Wall Materials</li>
+            <li>Floor Materials</li>
+        </ul>
+        <p>
+            Validated Fields
+        </p>
+        <ul>
+            <li>Roof, wall, and floor materials must be a value in the Material table. Anything else would be
+                uncivilized.</li>
+            <li>Builder email must be validated using an email address regular expression pattern. We do not need to
+                actually validate that it is correct.</li>
+            <li>Builder phone must be 10 digits. Non-numeric data should be accepted but not saved to the database.
+                (303) 555-1212 becomes 3035551212 in the database.</li>
+        </ul>
+        <p>
+            State Transition Testing
+        </p>
+        <p>
+            The life of a form is created, read-only, updated, and deleted (CRUD).
+        </p>
+        <p>
+            The form has two states, valid and invalid. The form should be saved when valid and not
+            saved when invalid. Invalid forms can be made valid and saved.
+        </p>
+        <p>
+            Decision Table Testing
+        </p>
+        <table class="table table-striped table-hover table-light" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Empty form</td>
+                    <td>Invalid</td>
+                </tr>
+                <tr>
+                    <td>Missing required field</td>
+                    <td>Invalid</td>
+                </tr>
+                <tr>
+                    <td>Invalid field</td>
+                    <td>Invalid</td>
+                </tr>
+                <tr>
+                    <td>Invalid form made valid</td>
+                    <td>Valid</td>
+                </tr>
+                <tr>
+                    <td>Minimum required fields</td>
+                    <td>Valid</td>
+                </tr>
+                <tr>
+                    <td>All fields with valid data</td>
+                    <td>Valid</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Additional Testing
+        </p>
+        <p>
+            After saving the form, run this query to validate the data.
+        </p>
+        <pre><code class="language-sql">
+SELECT *
+FROM Shack
+WHERE Address = '[The address entered]'
+</code></pre>
+        <p>
+            Questions for the stakeholders
+        </p>
+        <p>
+            I was able to save the same form twice. Should there be validation on duplicates?
+        </p>
+        <h2>Test Case</h2>
+        <p>
+            A test case should only have one reason to fail. In the test suite above, there are a lot of test cases. Do
+            we need to write each one?
+            I tried it once and spent so much time writing test cases I never tested.
+        </p>
+        <p>
+            Automation to the rescue? I certainly believe we can automate data entry forms. Then we can verify that the
+            form did not save when empty
+            and did save when filled out. How do we automate that the labels are spelled correctly? Are the required
+            fields indicated in some way?
+            There are some test cases that can be 100% automated, others only 50% and some not at all.
+        </p>
+        <p>
+            I rely on the test suite to provide test cases in the form of state diagrams and decision tables. I do not
+            want to write all of the test cases.
+        </p>
+        <p>
+            I use testing mnemonics and heuristics like:
+        </p>
+        <ul>
+            <li><a href="http://www.satisfice.com/articles/sfdpo.shtml">San Francisco Depot</a></li>
+            <li><a href="http://www.developsense.com/blog/2012/07/few-hiccupps/">HICCUPPS</a></li>
+            <li><a href="https://searchsoftwarequality.techtarget.com/definition/garbage-in-garbage-out">Garbage in,
+                    garbage out</a></li>
+            <li><a href="https://www.softwaretestinghelp.com/what-is-negative-testing/">Positive, Negative, Zero, and
+                    NULL</a></li>
+            <li><a href="https://softsmith-testing.blogspot.com/2012/08/the-crud-approach.html">CRUD</a></li>
+        </ul>
+        <h2>Bug Reporting</h2>
+        <p>
+            The purpose of testing is to find bugs. Follow the <a
+                href="https://www.sas.upenn.edu/~haroldfs/dravling/grice.html">Grice Maxims</a> when you find a bug.
+        </p>
+        <ul>
+            <li><span style="font-weight: bold;">Quantity</span>, the bug report title should give only enough
+                information as needed. For example, "The website does not automatically redirect to HTTPS."</li>
+            <li><span style="font-weight: bold;">Quality</span>, it must be truthful and provide evidence. Screenshots,
+                videos, and reproducible steps provide the evidence needed to confirm that the bug is real.</li>
+            <li><span style="font-weight: bold;">Relation</span>, answer why the bug is relevant. Why should the
+                business care? Let's add a relevant sentence to our earlier example, "This leaves visitor data exposed.
+                Modern browsers will warn them that the site is not secure."</li>
+            <li><span style="font-weight: bold;">Manner</span>, keep the bug report clear, brief, and orderly. This one
+                takes experience. A mentor can help you review your report before submitting it to the business. Know
+                your audience. If the report is for developers, it can be more technical. If it's for business
+                stakeholders, hold off on the SQL statements.</li>
+        </ul>
+        <h2>Conclusion</h2>
+        <p>
+            Let me close with this. I will write notes, basis, plans, and suites. I will code test cases or perform them
+            manually. Writing test cases is tedious,
+            hard to maintain, and not of much value. I prefer to lean on my ability to test instead of documenting every
+            possible test case. To illustrate this
+            point, here are some test cases for this form. I believe these should be in the mind of an experienced
+            tester. I’m sure I am missing some.
+            The more experience I get testing, the longer this list will become.
+        </p>
+        <ul>
+            <li>The user does not have privileges to create, read, update, or delete a form.</li>
+            <li>The user does have privileges to create and read a form, but not update or delete it.</li>
+            <li>The user does have privileges to read a form but not create, update, or delete it.</li>
+            <li>The user does have privileges to read and update a form but not create or delete it.</li>
+            <li>The user does have privileges to create, read, update, and delete a form.</li>
+            <li>The user creates a form. It should be blank or have some default values. </li>
+            <li>The labels should be spelled correctly.</li>
+            <li>Required fields should be indicated.</li>
+            <li>Does the form need to be translated into another language? This opens the door to a lot of localization
+                tests.</li>
+            <li>The labels should be styled consistently. Bolded? Colon at end? On top of field? On left of field?</li>
+            <li>The fields should be of the right type. Textboxes, dropdowns, date pickers, numeric, etc.</li>
+            <li>The fields should handle the correct amount of input. Everything from a two letter state code to a 2 GB
+                file upload.</li>
+            <li>Explanation text should be spelled correctly and consistently styled.</li>
+            <li>There should be some way to save the form.</li>
+            <li>There should be some way to exit the form without saving.</li>
+            <li>There should be some way to get help on the form.</li>
+            <li>The form questions should be clearly understood.</li>
+            <li>The order of the fields should be logical.</li>
+            <li>The tab order should flow top down and left to right.</li>
+            <li>The form should be scaled or allow scaling. This is for mobile devices or by vision impaired users.</li>
+            <li>When a form is created, are all fields blank or should there be default values?</li>
+            <li>Saving a blank form should result in a required field error.</li>
+            <li>The required fields error should be understandable, spelled correctly, and consistently styled.</li>
+            <li>Address is required, so leave it blank but fill in all other required fields with valid data. The error
+                message should point out the field
+                that is required. Repeat this for all required fields one at a time.</li>
+            <li>Email is validated, so fill it with invalid data and fill in all other required fields with valid data.
+                The error message should point out
+                the field that is invalid. Repeat this for all validated fields one at a time.</li>
+            <li>Validation patterns can be buggy. Research the pattern and see what valid inputs are being incorrectly
+                reported. </li>
+            <li>If validation is done client-side, disable JavaScript and submit the form. The invalid input should not
+                be saved to the database.</li>
+            <li>Create and submit a form with the least amount of completed fields possible. Check the database to make
+                sure the values were saved
+                correctly. There might be other fields such as create date in the table that needs to be validated.</li>
+            <li>Create and submit a form with all of the fields possible. Check the database to make sure the values
+                were saved correctly.</li>
+            <li>Submit the exact same form again. This will add a duplicate record in the database. Does the form allow
+                that? If it does, look down the
+                line where having a duplicate record would be a problem.</li>
+            <li>Read-only forms should not allow updating or deleting.</li>
+            <li>Check the database and look for invalid data that already exists. Open these forms in read-only mode.
+                Did you get a null reference exception?
+                Do you fix the old, bad data or ask to check for nulls in the form?</li>
+            <li>Edit a form and remove required fields. The form should not be allowed to save and an error message
+                should be displayed.</li>
+            <li>Edit a form and invalidate the fields. The form should not be allowed to save and an error message
+                should be displayed.</li>
+            <li>Edit the form that had the least amount of data. Update every required field and submit it. Check the
+                database to make sure the values were saved correctly.</li>
+            <li>Edit the form with all of the fields and submit it. Check the database to make sure the values were
+                saved correctly.</li>
+            <li>Delete a form. Where did you end up? Is there an undelete or a confirmation?</li>
+            <li>Delete all of the forms. Did you get a null reference exception when the list of forms is displayed?
+            </li>
+        </ul>
+    </main>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
+            <div class="col-md-4 d-flex align-items-center">
+                <p>Site content available under the <a href="https://mit-license.org/">MIT license</a>.</p>
+            </div>
+            <div class="col-md-4 d-flex align-items-center">
+                <p>Thank you <a href="https://docs.github.com/en/pages">GitHub Pages</a>, <a
+                        href="https://artvee.com/">Artvee</a>,
+                    <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>,
+                    <a href="https://highlightjs.org/">Highlight.js</a>.
+                </p>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="text-muted" href="links.htm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path
+                                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                            <path
+                                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="https://www.linkedin.com/in/stewshack">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="https://github.com/StewShack/stewshack.github.io">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="https://www.goodreads.com/user/show/92068618-dan-stewart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-book" viewBox="0 0 16 16">
+                            <path
+                                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- HighlightJS -->
+    <script src="../highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
