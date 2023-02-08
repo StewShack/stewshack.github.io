@@ -7,8 +7,8 @@
   <meta name="msapplication-tap-highlight" content="no" />
   <meta name="msapplication-TileColor" content="#10a51d" />
   <meta name="theme-color" content="#10a51d" />
-  <meta name="Description" content="Testing Jasper reports through it's API using Node.js" />
-  <title>StewShack - Testing Jasper reports using REST and Node.js</title>
+  <meta name="Description" content="Running Jasper reports through it's API using Node.js" />
+  <title>StewShack - Jasper report using REST and Node.js</title>
   <link rel="author" href="/humans.txt" />
   <link rel="sitemap" href="/sitemap.xml" />
   <!-- Include Bootstrap CSS -->
@@ -33,110 +33,101 @@
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-          <a href="https://artvee.com/dl/astronomicum-caesareum-pl-034#00"><img src="../images/node/914279ilsdl.jpg"
-              class="d-block mx-lg-auto img-fluid" alt="Astronomicum cæsareum pl 034 (1540)" width="700" height="1074"
-              loading="lazy" /></a>
+          <a href="https://artvee.com/dl/patterns-for-stoles-and-maniples-4#00"><img
+              src="../images/node/904159ilsdl.jpg" class="d-block mx-lg-auto img-fluid"
+              alt="Patterns for Stoles and Maniples 4 (1846)" width="700" height="956" loading="lazy" /></a>
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">Testing Jasper Reports with Node</h1>
+          <h1 class="display-5 fw-bold lh-1 mb-3">Jasper report using REST and Node.js</h1>
           <p class="lead">
             By: Dan Stewart<br />
-            December 2, 2018<br /><br />
-            <a href="https://community.jaspersoft.com/">Jasper Reports</a> is an open source reporting tool. They offer
-            a REST service that
-            we can use to write automated tests against.
-            <br /><br />
-            The goal of the tests are to ensure that the report simply runs. So, it's more of a smoke test than a test
-            for the correctness of the report.
-            <br /><br />
-            I will be using the Git bash shell in this article.
+            October 7, 2016<br /><br />
+            You have set up a <a href="https://community.jaspersoft.com/">Jasper Reports</a> server
+            and would like to access a report using Node.js through the Jasper REST V2 API.
           </p>
         </div>
       </div>
     </div>
-    ---
-    title: "Jasper report using REST and Node.js"
-    description: "Running Jasper reports through it's API using Node.js"
-    date: 2016-10-07T00:00:00-00:00
-    lastmod: 2016-10-07T00:00:00-00:00
-    activemenu: "web"
-    ---
+    <h2>The Short Answer</h2>
+    <pre><code class="language-javascript">
+var fs = require("fs");
+var request = require("request");
 
-    # Jasper report using REST and Node.js
+var url = "http://jasperserver[-pro]/rest_v2/reports/path/to/report.pdf";
 
-    By: Dan Stewart\
-    October 7, 2016\
-    [MIT License](https://mit-license.org)
+request(url)
+  .auth("username", "p@ssw0rd!", false)
+  .pipe(fs.createWriteStream("myfile.pdf"));
+    </code></pre>
+    <h2>The Long Answer</h2>
+    <p>
+      You have read through the Jasper REST v2 - Report Services documentation.
+    </p>
+    <p>
+      To access the report make a folder to hold your Node application.
+    </p>
+    <p>
+      Open the folder in your shell.
+    </p>
+    <p>
+      In your shell type:
+    </p>
+    <pre><code>
+npm init
+   </code></pre>
+    <p>
+      Answer the questions to get a package.json file.
+    </p>
+    <pre><code>
+npm install request --save
+    </code></pre>
+    <p>
+      When you were initializing the package.json you were asked for a main file the default is "index.js".
+    </p>
+    <p>
+      Create the main file with the contents:
+    </p>
+    <p>
+      index.js
+    </p>
+    <p>
+    <pre><code class="language-javascript">
+var fs = require("fs");
+var request = require("request");
 
-    ## The Short Answer
+var url = "http://jasperserver[-pro]:port/rest_v2/reports/path/to/report.pdf";
 
-    ```javascript
-    var fs = require("fs");
-    var request = require("request");
-
-    var url = "http://jasperserver[-pro]/rest_v2/reports/path/to/report.pdf";
-
-    request(url)
-    .auth("username", "p@ssw0rd!", false)
-    .pipe(fs.createWriteStream("myfile.pdf"));
-    ```
-
-    ## The Long Answer
-
-    You have set up a [JasperReports server](https://community.jaspersoft.com)
-    and would like to access a report using Node.js through the Jasper REST V2 API.
-
-    You have read through the Jasper REST v2 - Report Services documentation.
-
-    To access the report make a folder to hold your Node application.
-
-    Open the folder in your shell.
-
-    In your shell type:
-
-    ```shell
-    npm init
-    ```
-
-    Answer the questions to get a package.json file.
-
-    ```shell
-    npm install request --save
-    ```
-
-    When you were initializing the package.json you were asked for a main file the default is "index.js".
-
-    Create the main file with the contents:
-
-    index.js
-    ```javascript
-    var fs = require("fs");
-    var request = require("request");
-
-    var url = "http://jasperserver[-pro]:port/rest_v2/reports/path/to/report.pdf";
-
-    request(url)
-    .auth("username", "p@ssw0rd!", false)
-    .pipe(fs.createWriteStream("myfile.pdf"));
-    ```
-
-    We need the fs module to create the file that we are going to request from the Jasper REST service.
-
-    We need the request module to make it easy.
-
-    The URL is your server, port, and path to the report.
-
-    You can get the path by viewing the properties of your report from the server.
-
-    If your report has parameters, you will need to pass those on the URL.
-
-    In this example I am using basic authentication with the username and password in plain text.
-
-    If you do not want your login exposed to the world, you will need to research ways of hiding it.
-
-    We use Node's pipe function to write the file.
-
-    In this example I used PDF as the output, but you can change that to any output that Jasper supports.
+request(url)
+  .auth("username", "p@ssw0rd!", false)
+  .pipe(fs.createWriteStream("myfile.pdf"));
+    </code></pre>
+    <p>
+      We need the fs module to create the file that we are going to request from the Jasper REST service.
+    </p>
+    <p>
+      We need the request module to make it easy.
+    </p>
+    <p>
+      The URL is your server, port, and path to the report.
+    </p>
+    <p>
+      You can get the path by viewing the properties of your report from the server.
+    </p>
+    <p>
+      If your report has parameters, you will need to pass those on the URL.
+    </p>
+    <p>
+      In this example I am using basic authentication with the username and password in plain text.
+    </p>
+    <p>
+      If you do not want your login exposed to the world, you will need to research ways of hiding it.
+    </p>
+    <p>
+      We use Node's pipe function to write the file.
+    </p>
+    <p>
+      In this example I used PDF as the output, but you can change that to any output that Jasper supports.
+    </p>
   </main>
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
