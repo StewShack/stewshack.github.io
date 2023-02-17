@@ -42,15 +42,73 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Roadmap</h1>
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Backlog Management</h1>
                     <p class="lead">
                         By: Dan Stewart<br />
-                        February 13, 2023<br /><br />
-                        A roadmap helps you think long and short term one layer at a time.
+                        February 16, 2023<br /><br />
+                        Requirements, questions, and answers are all put into a backlog of work to be done.
                     </p>
                 </div>
             </div>
         </div>
+        <h2>The Anatomy of a Ticket</h2>
+        <p>
+            Some tickets do not need these sections. For example, "Fix the typo on the home page."
+            Other tickets do need a structure. Here is a typical structure that I use.
+        </p>
+        <ul>
+            <li>User Story</li>
+            <li>Scope</li>
+            <li>Out of Scope</li>
+            <li>Design</li>
+            <li>Text</li>
+            <li>Questions</li>
+            <li>Stakeholders</li>
+        </ul>
+        <p>Here is an example.</p>
+        <h2>Course Description Page</h2>
+        <p>
+            As a StewShack School of Real Estate student
+            <br />I want to see course information
+            <br />So that I can decide if I want to enroll into it
+        </p>
+        <h3>Scope</h3>
+        <p>
+            The scope of this ticket is to display course information along with an "Enroll" button.
+            The button will not do anything. Future tickets will enable this button to load a shopping
+            cart.
+        </p>
+        <h3>Out of Scope</h3>
+        <ul>
+            <li>Adding the course to a cart.</li>
+            <li>Launching the shopping cart.</li>
+        </ul>
+        <h3>
+            Design
+        </h3>
+        <p>
+            <img src="../images/process/design.png" width="322" height="267" alt="Example design"
+                class="d-block mx-lg-auto img-fluid" loading="lazy" />
+        </p>
+        <h3>
+            Text
+        </h3>
+        <ul>
+            <li>
+                The header is the course title.
+            </li>
+            <li>
+                The body is the course description.
+            </li>
+            <li>
+                Above the "Enroll" button is the course marketing image.
+            </li>
+            <li>
+                The button text is "Enroll". The button will be disabled when clicked.
+                This will give an indication to the student that they have clicked it, and we
+                are loading the cart.
+            </li>
+        </ul>
     </main>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
