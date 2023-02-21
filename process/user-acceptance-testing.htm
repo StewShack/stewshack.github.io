@@ -7,8 +7,8 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="msapplication-TileColor" content="#10a51d" />
     <meta name="theme-color" content="#10a51d" />
-    <meta name="Description" content="Managing a backlog of work to be done." />
-    <title>StewShack - Backlog Management</title>
+    <meta name="Description" content="Making a roadmap" />
+    <title>StewShack - Roadmap</title>
     <link rel="author" href="/humans.txt" />
     <link rel="sitemap" href="/sitemap.xml" />
     <!-- Include Bootstrap CSS -->
@@ -44,152 +44,37 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Backlog Management</h1>
+                    <h1 class="display-5 fw-bold lh-1 mb-3">User Acceptance Testing</h1>
                     <p class="lead">
                         By: Dan Stewart<br />
-                        February 16, 2023<br /><br />
-                        Requirements, questions, and answers are all put into a backlog of work to be done.
+                        February 20, 2023<br /><br />
+                        The quality assurance team has found that the thing was built right, but did
+                        we build the right thing?
                     </p>
                 </div>
             </div>
         </div>
-        <h2>The Elements of a Ticket</h2>
+        <h2>Why Conduct User Acceptanace Testing</h2>
         <p>
-            Some tickets do not need these sections. For example, "Fix the typo on the home page."
-            Other tickets do need a structure. Here is a typical structure that I use.
+            The development team is not typically a subject matter expert on the feature being built.
+            I try to learn as much as I can so that I can confirm that the feature is working as expected,
+            but it takes a user to really know. That is why I conduct user acceptance testing.
         </p>
+        <h2>Elements of User Acceptance Testing</h2>
+        <p>These are the elements of user acceptance testing.</p>
         <ul>
-            <li>User Story</li>
-            <li>Scope</li>
-            <li>Out of Scope</li>
-            <li>Design</li>
-            <li>Text</li>
-            <li>Questions</li>
-            <li>Stakeholders</li>
-        </ul>
-        <p>Here is an example.</p>
-        <div style="border: 1px solid #333; padding: 1em;">
-            <h2>Course Description Page</h2>
-            <p>
-                As a StewShack School of Real Estate student
-                <br />I want to see course information
-                <br />So that I can decide if I want to enroll into it
-            </p>
-            <h3>Scope</h3>
-            <p>
-                The scope of this ticket is to display course information.
-            </p>
-            <h3>Out of Scope</h3>
-            <ul>
-                <li>The enroll button will be added in a future ticket.</li>
-            </ul>
-            <h3>Design</h3>
-            <p>
-                <img src="../images/process/design.png" width="322" height="267" alt="Example design"
-                    class="d-block mx-lg-auto img-fluid" loading="lazy" />
-            </p>
-            <h3>Text</h3>
-            <ul>
-                <li>
-                    The header is the course title.
-                </li>
-                <li>
-                    The body is the course description.
-                </li>
-                <li>
-                    Above the "Enroll" button is the course marketing image.
-                </li>
-            </ul>
-            <h3>Stekeholders</h3>
-            <ul>
-                <li>Elvira Rameriez, CEO. (Informing)</li>
-                <li>Michael Boaz, Head of Enrollment ()</li>
-                <li>Angela Outsby, Marketing ()</li>
-            </ul>
-        </div>
-        <h2>Prioritization</h2>
-        <p>There are methods you can use to prioritize tickets.</p>
-        <h3>Matrix</h3>
-        <p>The first is from seven habits, put first things first.</p>
-        <table id="priority-grid" class="table table-striped table-hover table-light" style="width:100%">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Important</th>
-                    <th>Not Important</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Urgent</th>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Not Urgent</th>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <p>
-            It's tempting to simply reject ideas that are not important and not urgent. However,
-            priorities might change over time. That idea might become important and urgent later.
-        </p>
-        <h3>
-            Risk-Based
-        </h3>
-        <p>With risk-based prioritization, we ask ourselves these questions:</p>
-        <ul>
+            <li>The stakeholders from the epic are the participants in the testing.</li>
             <li>
-                What is the risk of not working on the ticket?
+                Send out a meeting requet to them for a kick-off meeting. In the meeting explain
+                the feature being released. Provide a demo. Ask if they need anything such as
+                logins. Provide a timeline on how long the testing is to take place.
             </li>
             <li>
-                What is the risk of working on the ticket?
+                Sometimes just the demo is good enough. Others times it will take an extended
+                period of time to fully test it. In these cases we need a way of reporting any
+                problems. Chat is a great start, but a spreadsheet is more durable.
             </li>
         </ul>
-        <h2>Backlog Management</h2>
-        <p>
-            All of the tickets in the backlog are important now, or have the potential to be important
-            in the future. Any tickets are never going to be worked on have been canceled after talking
-            to the stakeholders. It is a delicate conversation when an idea is rejected because it
-            would harm the product.
-        </p>
-        <p>
-            I practice inbox zero. So, I also want to practice backlog zero. When a ticket comes in
-            I have these questions:
-        </p>
-        <ol>
-            <li>
-                Is this worth doing? If not, work with the stakeholders to either cancel it or
-                get a better understanding.
-            </li>
-            <li>
-                What is the priority? Move the ticket into a high or low backlog.
-            </li>
-        </ol>
-        <p>
-            The ticket is moved into another backlog, and the new ticket backlog is empty.
-        </p>
-        <h2>Jira Queries</h2>
-        <p>Here are some Jira queries I use to maintain the backlog.</p>
-        <p>I prefer Kanban, but I'm current working in two week Sprints.</p>
-        <p>
-            Tickets in a Sprint that I am not watching. This helps me catch tickets that were
-            added to the Sprint.
-        </p>
-        <p>
-            Tickets missing a team, component, and/or label. Tickets added to the backlog are
-            assigned a team in the United States time zone or India time zone. Components help
-            separate the tickets into the area they affect. These include the front-end, back-end,
-            B2B, B2C, and other areas. Finally, the label helps with filtering all of the tickets
-            for a specific project.
-        </p>
-        <p>
-            Keeping a backlog categorized and prioritized is a daily task. Tickets have to be
-            refined with the stakeholders. Then refined with the development team before they can
-            be worked on. It would waste time to work on an unrefined ticket and get it wrong.
-        </p>
     </main>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
@@ -248,14 +133,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <!-- Datatables JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script>
-        $('pririty-grid').DataTable({
-            paging: false
-        });
-    </script>
 </body>
 
 </html>
