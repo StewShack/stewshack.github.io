@@ -16,6 +16,8 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <!-- Include DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/datatables.min.css" />
+    <!-- HighlightJS -->
+    <link href="../gml.min.css" rel="stylesheet" />
     <!-- Bootstrap Overrides and Site CSS -->
     <link href="../site.css" rel="stylesheet" />
 </head>
@@ -33,21 +35,20 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6 text-center">
-                    <img src="../images/process/912924ilsdl.jpg" class="d-block mx-lg-auto img-fluid"
-                        alt="Des couleurs et de leurs applications aux arts industriels a l'aide des cercles chromatiques pl 08 (1864)"
-                        width="700" height="805" loading="lazy" />
-                    <br />
-                    <figcaption class="blockquote-footer">
-                        Des couleurs et de leurs applications aux arts industriels a l'aide des cercles chromatiques pl
-                        08 (1864)
-                    </figcaption>
+                    <a href="https://artvee.com/dl/greek-no-3#00">
+                        <img src="../images/process/904309ilsdl.jpg" class="d-block mx-lg-auto img-fluid"
+                            alt="Greek No.3 (1856)" width="700" height="1020" loading="lazy" />
+                        <br />
+                        <figcaption class="blockquote-footer">
+                            Greek No.3 (1856)
+                        </figcaption>
                     </a>
                 </div>
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold lh-1 mb-3">Backlog Management</h1>
                     <p class="lead">
                         By: Dan Stewart<br />
-                        February 16, 2023<br /><br />
+                        February 25, 2023<br /><br />
                         Requirements, questions, and answers are all put into a backlog of work to be done.
                     </p>
                 </div>
@@ -55,8 +56,8 @@
         </div>
         <h2>The Elements of a Ticket</h2>
         <p>
-            Some tickets do not need these sections. For example, "Fix the typo on the home page."
-            Other tickets do need a structure. Here is a typical structure that I use.
+            Some tickets do not need a structure. For example, "Fix the typo on the home page."
+            Other tickets do need a structure. Here is a typical one that I use.
         </p>
         <ul>
             <li>User Story</li>
@@ -110,7 +111,8 @@
         <h2>Prioritization</h2>
         <p>There are methods you can use to prioritize tickets.</p>
         <h3>Matrix</h3>
-        <p>The first is from seven habits, put first things first.</p>
+        <p>The first method is from the seven habits, <a href="https://www.franklincovey.com/habit-3/">put first things
+                first</a>.</p>
         <table id="priority-grid" class="table table-striped table-hover table-light" style="width:100%">
             <thead>
                 <tr>
@@ -137,9 +139,12 @@
             priorities might change over time. That idea might become important and urgent later.
         </p>
         <h3>
-            Risk-Based
+            Risk-First
         </h3>
-        <p>With risk-based prioritization, we ask ourselves these questions:</p>
+        <p>
+            The second method priotizes by <a href="https://riskfirst.org/">risk-first</a>.
+            We ask ourselves these questions:
+        </p>
         <ul>
             <li>
                 What is the risk of not working on the ticket?
@@ -151,7 +156,7 @@
         <h2>Backlog Management</h2>
         <p>
             All of the tickets in the backlog are important now, or have the potential to be important
-            in the future. Any tickets are never going to be worked on have been canceled after talking
+            in the future. Any tickets that are never going to be worked on have been canceled after talking
             to the stakeholders. It is a delicate conversation when an idea is rejected because it
             would harm the product.
         </p>
@@ -175,21 +180,59 @@
         <p>Here are some Jira queries I use to maintain the backlog.</p>
         <p>I prefer Kanban, but I'm current working in two week Sprints.</p>
         <p>
-            Tickets in a Sprint that I am not watching. This helps me catch tickets that were
-            added to the Sprint.
+            Here is a <a
+                href="https://support.atlassian.com/jira-service-management-cloud/docs/use-advanced-search-with-jira-query-language-jql/">Jira
+                query</a> for tickets in a Sprint that I am not watching.
+            This helps me catch tickets that were added to a Sprint. Watching a ticket will alert me
+            when it is changed. I have the alert emailed to me as a "<a
+                href="https://en.wikipedia.org/wiki/Push%E2%80%93pull_strategy">push</a>" strategy for keeping
+            up with ticket progress.
         </p>
+        <pre><code class="language-sql">
+project = "STEW" 
+   AND watcher != currentUser() 
+   AND Sprint in openSprints() 
+   AND status != Cancelled
+</code></pre>
         <p>
-            Tickets missing a team, component, and/or label. Tickets added to the backlog are
-            assigned a team in the United States time zone or India time zone. Components help
+            Here is a query to return tickets that are missing a team, component, and/or label.
+            On my backlog, I have to assign a team either in the United States time zone or the
+            India time zone. Components help
             separate the tickets into the area they affect. These include the front-end, back-end,
             B2B, B2C, and other areas. Finally, the label helps with filtering all of the tickets
             for a specific project.
         </p>
+        <pre><code class="language-sql">
+project = "STEW" 
+   AND (
+      Team[Team]" is EMPTY
+      OR component is EMPTY 
+      OR labels is EMPTY) 
+   AND Sprint in openSprints() 
+   AND status != Cancelled
+</code></pre>
+        <p>
+            Ticket are grouped into epics. When all of the tickets are in an epic, we can use
+            <a href="https://confluence.atlassian.com/jiraportfolioserver/what-is-a-plan-952623577.html">Jira plans</a>
+            to produce a gantt chart. Here is a Jira query to show tickets that are missing an epic.
+        </p>
+        <pre><code class="language-sql">
+project = "STEW" 
+   AND "Epic Link" is EMPTY 
+   AND Sprint in openSprints() 
+   AND status != Cancelled
+</code></pre>
         <p>
             Keeping a backlog categorized and prioritized is a daily task. Tickets have to be
             refined with the stakeholders. Then refined with the development team before they can
             be worked on. It would waste time to work on an unrefined ticket and get it wrong.
         </p>
+        <h2>Sources</h2>
+        <ul>
+            <li><a href="https://riskfirst.org/">Risk-First</a></li>
+            <li><a href="https://www.franklincovey.com/habit-3/">Habit 3: Put First Things First</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Push%E2%80%93pull_strategy">Push-Pull Strategy</a></li>
+        </ul>
     </main>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
@@ -251,7 +294,11 @@
     <!-- Datatables JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <!-- HighlightJS -->
+    <script src="../highlight.min.js"></script>
     <script>
+        hljs.highlightAll();
+
         $('pririty-grid').DataTable({
             paging: false
         });
