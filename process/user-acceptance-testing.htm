@@ -7,8 +7,8 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="msapplication-TileColor" content="#10a51d" />
     <meta name="theme-color" content="#10a51d" />
-    <meta name="Description" content="Making a roadmap" />
-    <title>StewShack - Roadmap</title>
+    <meta name="Description" content="User Acceptance Testing" />
+    <title>StewShack - User Acceptance Testing</title>
     <link rel="author" href="/humans.txt" />
     <link rel="sitemap" href="/sitemap.xml" />
     <!-- Include Bootstrap CSS -->
@@ -33,14 +33,15 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6 text-center">
-                    <img src="../images/process/912924ilsdl.jpg" class="d-block mx-lg-auto img-fluid"
-                        alt="Des couleurs et de leurs applications aux arts industriels a l'aide des cercles chromatiques pl 08 (1864)"
-                        width="700" height="805" loading="lazy" />
-                    <br />
-                    <figcaption class="blockquote-footer">
-                        Des couleurs et de leurs applications aux arts industriels a l'aide des cercles chromatiques pl
-                        08 (1864)
-                    </figcaption>
+                    <a
+                        href="https://artvee.com/dl/aigles-et-chene-papier-peint-antilopes-tigres-cactus-et-palmiers-bordure#00">
+                        <img src="../images/process/904002ilsdl.jpg" class="d-block mx-lg-auto img-fluid"
+                            alt="Aigles et chene, papier peint. Antilopes, tigres, cactus et palmiers, bordure. (1897)"
+                            width="700" height="1022" loading="lazy" />
+                        <br />
+                        <figcaption class="blockquote-footer">
+                            Aigles et chene, papier peint. Antilopes, tigres, cactus et palmiers, bordure. (1897)
+                        </figcaption>
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -63,18 +64,113 @@
         <h2>Elements of User Acceptance Testing</h2>
         <p>These are the elements of user acceptance testing.</p>
         <ul>
-            <li>The stakeholders from the epic are the participants in the testing.</li>
+            <li>People - the stakeholders from the epic are the participants in the testing.</li>
             <li>
-                Send out a meeting requet to them for a kick-off meeting. In the meeting explain
-                the feature being released. Provide a demo. Ask if they need anything such as
-                logins. Provide a timeline on how long the testing is to take place.
+                Gathering - a kick-off meeting is set to explain
+                the feature being released.
             </li>
             <li>
+                Demonstrating - in the meeting I provide a demo.
                 Sometimes just the demo is good enough. Others times it will take an extended
                 period of time to fully test it. In these cases we need a way of reporting any
-                problems. Chat is a great start, but a spreadsheet is more durable.
+                problems. I create a spreadsheet to capture feedback.
+            </li>
+            <li>
+                Testing - I ask the stakeholders if they need anything such as logins.
+                I provide a timeline for the testing. Then, I actually test it along with them.
+                Please read my <a href="../qa/testing-process.htm">testing process</a>.
+            </li>
+            <li>
+                Monitoring - I monitor the spreadsheet, and reach out to anyone who has not started testing.
             </li>
         </ul>
+        <h3>Spreadsheet</h3>
+        <p>Here are the columns and their purpose on the spreadsheet.</p>
+        <table id="uat-grid" class="table table-striped table-hover table-light" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Test</td>
+                    <td>A brief name for the test.</td>
+                    <td>Invalid Login</td>
+                </tr>
+                <tr>
+                    <td>Steps</td>
+                    <td>An ordered list of steps to perform the test.</td>
+                    <td>
+                        <ol>
+                            <li>Go to the home page.</li>
+                            <li>Enter an invalid login.</li>
+                            <li>Click the "Sign-in" button.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Expected Result</td>
+                    <td>The expected results of running the test.</td>
+                    <td>An error message will appear.</td>
+                </tr>
+                <tr>
+                    <td>Actual Result</td>
+                    <td>
+                        The actual result of running the test. This is where the valuable
+                        feedback will be gathered.
+                    </td>
+                    <td>
+                        I did see an error message, but the font was too small to read.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tester Name</td>
+                    <td>
+                        The name of the person performing the test.
+                    </td>
+                    <td>Dan Stewart</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>The date the test was run.</td>
+                    <td>2/25/2023</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>Pass / Fail</td>
+                    <td>Fail</td>
+                </tr>
+                <tr>
+                    <td>Level</td>
+                    <td>
+                        Blocker (cannot release with this issue) /
+                        Fix Post-Release (we can releae, but need to fix ASAP) /
+                        Suggestion (we can release and determine if we should fix this)</td>
+                    <td>Blocker</td>
+                </tr>
+                <tr>
+                    <td>Jira Ticket</td>
+                    <td>The Jira ticket link for the issue.</td>
+                    <td><a href="#">STEW-5698</a></td>
+                </tr>
+                <tr>
+                    <td>Resolution Notes</td>
+                    <td>
+                        Notes back to the tester on the resolution. In Google docs, you
+                        can mention someone in a comment to assign it to them.
+                    </td>
+                    <td>@dan This has been fixed by increasing the font size. Please retest.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Conclusion</h2>
+        <p>
+            At the end of the user acceptance testing period, I schedule a meeting with the stakeholders.
+            In that meeting, we go through the findings and determine if we can release the feature.
+        </p>
     </main>
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-primary">
@@ -84,7 +180,8 @@
             <div class="col-md-4 d-flex align-items-center">
                 <p>Thank you <a href="https://docs.github.com/en/pages">GitHub Pages</a>, <a
                         href="https://artvee.com/">Artvee</a>,
-                    <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>.
+                    <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>,
+                    <a href="https://datatables.net/">DataTables</a>.
                 </p>
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
@@ -133,6 +230,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <!-- Datatables JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script>
+        $('#uat-grid').DataTable({
+            paging: false,
+            sorting: false,
+            info: false,
+            searching: false
+        });
+    </script>
 </body>
 
 </html>
