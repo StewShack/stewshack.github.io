@@ -154,7 +154,7 @@ HAVING COUNT(s.ShackID) > 1
       are delimited by /*...*/, and line comments are --.
     </p>
     <p>
-      Avoid adding comments at the end of a line of code. Here be dragons...
+      Avoid adding comments at the end of a line of code because it could cause errors.
     </p>
     <pre><code class="language-sql">
 UPDATE Shack SET HasWater = 1 -- Yeah water! WHERE ShackID = 5
